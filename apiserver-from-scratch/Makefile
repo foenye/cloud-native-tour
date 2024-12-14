@@ -1,0 +1,15 @@
+test:
+	go test -v ./cmd/apiserver
+doc: swag
+	swag init --generalInfo cmd/main.go --dir=./ --output=./cmd/apis/docs --outputTypes json --parseDependency true
+
+swag: # find or download swag if necessary
+ifeq (, $(shell which ko))
+	go install github.com/swaggo/swag/cmd/swag@v1.16.4
+endif
+
+deploy:
+	KOCACHE=/tmp/ko KO_DOCKER_REPO=localhost:5000 ko apply -B -f ./deploy.yml
+
+undeploy:
+	kubectl delete -f ./deploy.yml
