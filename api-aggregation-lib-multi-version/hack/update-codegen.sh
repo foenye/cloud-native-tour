@@ -30,9 +30,9 @@ kube::codegen::gen_helpers \
     --boilerplate "${SCRIPT_ROOT}/hack/boilerplate.go.txt" \
     "${SCRIPT_ROOT}"
 
-kube::codegen::gen_register \
-      --boilerplate "${SCRIPT_ROOT}/hack/boilerplate.go.txt" \
-       "${SCRIPT_ROOT}/pkg/api"
+#kube::codegen::gen_register \
+#      --boilerplate "${SCRIPT_ROOT}/hack/boilerplate.go.txt" \
+#       "${SCRIPT_ROOT}/pkg/api/transformation"
 
 # UPDATE_API_KNOWN_VIOLATIONS=true ./hack/update-codegen.sh
 API_KNOWN_VIOLATIONS_DIR=${SCRIPT_ROOT}/hack

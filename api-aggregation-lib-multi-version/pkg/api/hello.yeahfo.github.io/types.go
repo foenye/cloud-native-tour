@@ -4,6 +4,13 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
+const (
+	Group     = "hello.yeahfo.github.io"
+	Plural    = "foos"
+	Singular  = "foo"
+	ShortName = "fo"
+)
+
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 type Foo struct {

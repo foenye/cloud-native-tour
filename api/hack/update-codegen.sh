@@ -34,6 +34,10 @@ kube::codegen::gen_register \
       --boilerplate "${SCRIPT_ROOT}/hack/boilerplate.go.txt" \
        "${SCRIPT_ROOT}/hello.yeahfo.github.io"
 
+kube::codegen::gen_register \
+      --boilerplate "${SCRIPT_ROOT}/hack/boilerplate.go.txt" \
+       "${SCRIPT_ROOT}/transformation"
+
 # UPDATE_API_KNOWN_VIOLATIONS=true ./hack/update-codegen.sh
 API_KNOWN_VIOLATIONS_DIR=${SCRIPT_ROOT}/hack
 if [[ -n "${API_KNOWN_VIOLATIONS_DIR:-}" ]]; then
@@ -44,8 +48,8 @@ if [[ -n "${API_KNOWN_VIOLATIONS_DIR:-}" ]]; then
 fi
 
 kube::codegen::gen_openapi \
-    --output-dir "${SCRIPT_ROOT}/openapi" \
-    --output-pkg "k8s.io/${THIS_PKG}/openapi" \
+    --output-dir "${SCRIPT_ROOT}/generated/openapi" \
+    --output-pkg "k8s.io/${THIS_PKG}/generated/openapi" \
     --report-filename "${report_filename:-"/dev/null"}" \
     ${update_report:+"${update_report}"} \
     --boilerplate "${SCRIPT_ROOT}/hack/boilerplate.go.txt" \
@@ -54,8 +58,8 @@ kube::codegen::gen_openapi \
 kube::codegen::gen_client \
     --with-watch \
     --with-applyconfig \
-    --output-dir "${SCRIPT_ROOT}" \
-    --output-pkg "${THIS_PKG}" \
+    --output-dir "${SCRIPT_ROOT}/generated" \
+    --output-pkg "${THIS_PKG}/generated" \
     --boilerplate "${SCRIPT_ROOT}/hack/boilerplate.go.txt" \
     --prefers-protobuf \
     "${SCRIPT_ROOT}"

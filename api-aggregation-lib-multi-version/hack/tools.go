@@ -7,3 +7,4 @@ package tools
 import _ "k8s.io/code-generator"
 import _ "github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v1"
 import _ "github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2"
+import _ "github.com/yeahfo/cloud-native-tour/api/transformation/v1beta1"
