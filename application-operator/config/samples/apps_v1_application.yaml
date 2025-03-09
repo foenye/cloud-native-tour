@@ -1,0 +1,9 @@
+apiVersion: apps.yeahfo.github.io/v1
+kind: Application
+metadata:
+  labels:
+    app.kubernetes.io/name: application-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: application-sample
+spec:
+  # TODO(user): Add fields here
