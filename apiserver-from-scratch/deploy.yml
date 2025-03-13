@@ -23,7 +23,7 @@ spec:
         app: api-scratch
     spec:
       containers:
-        - image: ko://github.com/yeahfo/cloud-native-tour/apiserver-from-scratch/cmd/apiserver
+        - image: ko://github.com/eonvon/cloud-native-tour/apiserver-from-scratch/cmd/apiserver
           imagePullPolicy: Always
           name: apiserver
           env:
@@ -66,12 +66,12 @@ type: Opaque
 apiVersion: apiregistration.k8s.io/v1
 kind: APIService
 metadata:
-  name: v1.hello.yeahfo.github.io
+  name: v1.hello.eonvon.github.io
 spec:
   service:
     name: api-scratch
     namespace: default
-  group: hello.yeahfo.github.io
+  group: hello.eonvon.github.io
   version: v1
   insecureSkipTLSVerify: true
   groupPriorityMinimum: 100

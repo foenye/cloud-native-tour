@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/yeahfo/cloud-native-tour/apiserver-from-scratch/cmd/apis"
-	"github.com/yeahfo/cloud-native-tour/apiserver-from-scratch/cmd/foos"
-	"github.com/yeahfo/cloud-native-tour/apiserver-from-scratch/pkg/helper"
+	"github.com/eonvon/cloud-native-tour/apiserver-from-scratch/cmd/apis"
+	"github.com/eonvon/cloud-native-tour/apiserver-from-scratch/cmd/foos"
+	"github.com/eonvon/cloud-native-tour/apiserver-from-scratch/pkg/helper"
 	"log"
 	"net/http"
 	"os"
@@ -15,7 +15,7 @@ const (
 	tlsCertName = "apiserver.crt"
 )
 
-// @title           hello.yeahfo.github.io-server
+// @title           hello.eonvon.github.io-server
 // @version         0.1
 // @description     K8s apiserver style http server from scratch
 // @BasePath  /apis
@@ -42,17 +42,17 @@ func ServeMux() *http.ServeMux {
 	})))
 
 	mux.Handle("/apis", helper.LoggerHandler(http.HandlerFunc(apis.APIs)))
-	mux.Handle("/apis/hello.yeahfo.github.io", helper.LoggerHandler(http.HandlerFunc(apis.APIGroup)))
-	mux.Handle("/apis/hello.yeahfo.github.io/v1", helper.LoggerHandler(http.HandlerFunc(apis.APIGroupV1Resources)))
+	mux.Handle("/apis/hello.eonvon.github.io", helper.LoggerHandler(http.HandlerFunc(apis.APIGroup)))
+	mux.Handle("/apis/hello.eonvon.github.io/v1", helper.LoggerHandler(http.HandlerFunc(apis.APIGroupV1Resources)))
 	mux.Handle("/openapi/v2", helper.LoggerHandler(http.HandlerFunc(apis.OpenapiV2)))
 
-	// LIST /apis/hello.yeahfo.github.io/v1/foos
-	// LIST /apis/hello.yeahfo.github.io/v1/namespaces/{namespace}/foos
-	// GET  /apis/hello.yeahfo.github.io/v1/namespaces/{namespace}/foos/{name}
-	// POST /apis/hello.yeahfo.github.io/v1/namespaces/{namespace}/foos/
-	// PUT  /apis/hello.yeahfo.github.io/v1/namespaces/{namespace}/foos/{name}
-	// DEL  /apis/hello.yeahfo.github.io/v1/namespaces/{namespace}/foos/{name}
-	mux.Handle("/apis/hello.yeahfo.github.io/v1/", helper.LoggerHandler(helper.ContentTypeJSONHandler(http.HandlerFunc(
+	// LIST /apis/hello.eonvon.github.io/v1/foos
+	// LIST /apis/hello.eonvon.github.io/v1/namespaces/{namespace}/foos
+	// GET  /apis/hello.eonvon.github.io/v1/namespaces/{namespace}/foos/{name}
+	// POST /apis/hello.eonvon.github.io/v1/namespaces/{namespace}/foos/
+	// PUT  /apis/hello.eonvon.github.io/v1/namespaces/{namespace}/foos/{name}
+	// DEL  /apis/hello.eonvon.github.io/v1/namespaces/{namespace}/foos/{name}
+	mux.Handle("/apis/hello.eonvon.github.io/v1/", helper.LoggerHandler(helper.ContentTypeJSONHandler(http.HandlerFunc(
 		foos.FooHandlers))))
 
 	return mux

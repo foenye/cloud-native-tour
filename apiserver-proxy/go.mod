@@ -1,4 +1,4 @@
-module github.com/yeahfo/cloud-native-tour/apiserver-proxy
+module github.com/eonvon/cloud-native-tour/apiserver-proxy
 
 go 1.23.4
 

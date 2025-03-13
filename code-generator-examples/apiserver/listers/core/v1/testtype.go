@@ -19,7 +19,7 @@ limitations under the License.
 package v1
 
 import (
-	corev1 "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1"
+	corev1 "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	listers "k8s.io/client-go/listers"
 	cache "k8s.io/client-go/tools/cache"

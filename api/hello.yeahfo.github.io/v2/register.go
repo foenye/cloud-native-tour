@@ -7,7 +7,7 @@ import (
 )
 
 const (
-	Group   = "hello.yeahfo.github.io"
+	Group   = "hello.eonvon.github.io"
 	Version = "v2"
 )
 

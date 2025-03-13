@@ -1,4 +1,4 @@
-module github.com/yeahfo/cloud-native-tour/api
+module github.com/eonvon/cloud-native-tour/api
 
 go 1.23.4
 

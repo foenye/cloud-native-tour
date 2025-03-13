@@ -21,10 +21,10 @@ import (
 	context "context"
 	time "time"
 
-	versioned "github.com/yeahfo/cloud-native-tour/api/generated/clientset/versioned"
-	internalinterfaces "github.com/yeahfo/cloud-native-tour/api/generated/informers/externalversions/internalinterfaces"
-	helloyeahfogithubiov2 "github.com/yeahfo/cloud-native-tour/api/generated/listers/hello.yeahfo.github.io/v2"
-	apihelloyeahfogithubiov2 "github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2"
+	versioned "github.com/eonvon/cloud-native-tour/api/generated/clientset/versioned"
+	internalinterfaces "github.com/eonvon/cloud-native-tour/api/generated/informers/externalversions/internalinterfaces"
+	helloeonvongithubiov2 "github.com/eonvon/cloud-native-tour/api/generated/listers/hello.eonvon.github.io/v2"
+	apihelloeonvongithubiov2 "github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	watch "k8s.io/apimachinery/pkg/watch"
@@ -35,7 +35,7 @@ import (
 // Foos.
 type FooInformer interface {
 	Informer() cache.SharedIndexInformer
-	Lister() helloyeahfogithubiov2.FooLister
+	Lister() helloeonvongithubiov2.FooLister
 }
 
 type fooInformer struct {
@@ -70,7 +70,7 @@ func NewFilteredFooInformer(client versioned.Interface, namespace string, resync
 				return client.HelloV2().Foos(namespace).Watch(context.TODO(), options)
 			},
 		},
-		&apihelloyeahfogithubiov2.Foo{},
+		&apihelloeonvongithubiov2.Foo{},
 		resyncPeriod,
 		indexers,
 	)
@@ -81,9 +81,9 @@ func (f *fooInformer) defaultInformer(client versioned.Interface, resyncPeriod t
 }
 
 func (f *fooInformer) Informer() cache.SharedIndexInformer {
-	return f.factory.InformerFor(&apihelloyeahfogithubiov2.Foo{}, f.defaultInformer)
+	return f.factory.InformerFor(&apihelloeonvongithubiov2.Foo{}, f.defaultInformer)
 }
 
-func (f *fooInformer) Lister() helloyeahfogithubiov2.FooLister {
-	return helloyeahfogithubiov2.NewFooLister(f.Informer().GetIndexer())
+func (f *fooInformer) Lister() helloeonvongithubiov2.FooLister {
+	return helloeonvongithubiov2.NewFooLister(f.Informer().GetIndexer())
 }

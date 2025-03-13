@@ -29,12 +29,12 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/apis/core.TestType":          schema_code_generator_examples_apiserver_apis_core_TestType(ref),
-		"github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/apis/core.TestTypeList":      schema_code_generator_examples_apiserver_apis_core_TestTypeList(ref),
-		"github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/apis/core.TestTypeStatus":    schema_code_generator_examples_apiserver_apis_core_TestTypeStatus(ref),
-		"github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1.TestType":       schema_apiserver_apis_core_v1_TestType(ref),
-		"github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1.TestTypeList":   schema_apiserver_apis_core_v1_TestTypeList(ref),
-		"github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1.TestTypeStatus": schema_apiserver_apis_core_v1_TestTypeStatus(ref),
+		"github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/apis/core.TestType":          schema_code_generator_examples_apiserver_apis_core_TestType(ref),
+		"github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/apis/core.TestTypeList":      schema_code_generator_examples_apiserver_apis_core_TestTypeList(ref),
+		"github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/apis/core.TestTypeStatus":    schema_code_generator_examples_apiserver_apis_core_TestTypeStatus(ref),
+		"github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1.TestType":       schema_apiserver_apis_core_v1_TestType(ref),
+		"github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1.TestTypeList":   schema_apiserver_apis_core_v1_TestTypeList(ref),
+		"github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1.TestTypeStatus": schema_apiserver_apis_core_v1_TestTypeStatus(ref),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.APIGroup":                                                     schema_pkg_apis_meta_v1_APIGroup(ref),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.APIGroupList":                                                 schema_pkg_apis_meta_v1_APIGroupList(ref),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.APIResource":                                                  schema_pkg_apis_meta_v1_APIResource(ref),
@@ -113,7 +113,7 @@ func schema_code_generator_examples_apiserver_apis_core_TestType(ref common.Refe
 					"Status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/apis/core.TestTypeStatus"),
+							Ref:     ref("github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/apis/core.TestTypeStatus"),
 						},
 					},
 				},
@@ -121,7 +121,7 @@ func schema_code_generator_examples_apiserver_apis_core_TestType(ref common.Refe
 			},
 		},
 		Dependencies: []string{
-			"github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/apis/core.TestTypeStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta", "k8s.io/apimachinery/pkg/apis/meta/v1.TypeMeta"},
+			"github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/apis/core.TestTypeStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta", "k8s.io/apimachinery/pkg/apis/meta/v1.TypeMeta"},
 	}
 }
 
@@ -151,7 +151,7 @@ func schema_code_generator_examples_apiserver_apis_core_TestTypeList(ref common.
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/apis/core.TestType"),
+										Ref:     ref("github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/apis/core.TestType"),
 									},
 								},
 							},
@@ -162,7 +162,7 @@ func schema_code_generator_examples_apiserver_apis_core_TestTypeList(ref common.
 			},
 		},
 		Dependencies: []string{
-			"github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/apis/core.TestType", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta", "k8s.io/apimachinery/pkg/apis/meta/v1.TypeMeta"},
+			"github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/apis/core.TestType", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta", "k8s.io/apimachinery/pkg/apis/meta/v1.TypeMeta"},
 	}
 }
 
@@ -216,14 +216,14 @@ func schema_apiserver_apis_core_v1_TestType(ref common.ReferenceCallback) common
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1.TestTypeStatus"),
+							Ref:     ref("github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1.TestTypeStatus"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1.TestTypeStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1.TestTypeStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -261,7 +261,7 @@ func schema_apiserver_apis_core_v1_TestTypeList(ref common.ReferenceCallback) co
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1.TestType"),
+										Ref:     ref("github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1.TestType"),
 									},
 								},
 							},
@@ -272,7 +272,7 @@ func schema_apiserver_apis_core_v1_TestTypeList(ref common.ReferenceCallback) co
 			},
 		},
 		Dependencies: []string{
-			"github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1.TestType", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1.TestType", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 

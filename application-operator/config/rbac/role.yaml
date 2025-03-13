@@ -5,7 +5,7 @@ metadata:
   name: manager-role
 rules:
 - apiGroups:
-  - apps.yeahfo.github.io
+  - apps.eonvon.github.io
   resources:
   - applications
   verbs:
@@ -17,13 +17,13 @@ rules:
   - update
   - watch
 - apiGroups:
-  - apps.yeahfo.github.io
+  - apps.eonvon.github.io
   resources:
   - applications/finalizers
   verbs:
   - update
 - apiGroups:
-  - apps.yeahfo.github.io
+  - apps.eonvon.github.io
   resources:
   - applications/status
   verbs:

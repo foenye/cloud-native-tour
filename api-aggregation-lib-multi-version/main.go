@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/yeahfo/cloud-native-tour/api-aggregation-lib-multi-version/pkg/cmd"
+	"github.com/eonvon/cloud-native-tour/api-aggregation-lib-multi-version/pkg/cmd"
 	"k8s.io/apiserver/pkg/server"
 	"k8s.io/component-base/cli"
 	"os"

@@ -3,9 +3,9 @@
 
 // +k8s:deepcopy-gen=package
 // +k8s:protobuf-gen=package
-// +k8s:conversion-gen=github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration
+// +k8s:conversion-gen=github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration
 // +k8s:openapi-gen=true
-// +groupName=apiregistration.yeahfo.github.io
+// +groupName=apiregistration.eonvon.github.io
 // +k8s:defaulter-gen=TypeMeta
 // +k8s:prerelease-lifecycle-gen=true
 

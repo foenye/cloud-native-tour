@@ -19,11 +19,11 @@ limitations under the License.
 package fake
 
 import (
-	clientset "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/client/clientset_generated/clientset"
-	apiregistrationv1 "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/client/clientset_generated/clientset/typed/apiregistration/v1"
-	fakeapiregistrationv1 "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/client/clientset_generated/clientset/typed/apiregistration/v1/fake"
-	apiregistrationv1beta1 "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/client/clientset_generated/clientset/typed/apiregistration/v1beta1"
-	fakeapiregistrationv1beta1 "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/client/clientset_generated/clientset/typed/apiregistration/v1beta1/fake"
+	clientset "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/client/clientset_generated/clientset"
+	apiregistrationv1 "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/client/clientset_generated/clientset/typed/apiregistration/v1"
+	fakeapiregistrationv1 "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/client/clientset_generated/clientset/typed/apiregistration/v1/fake"
+	apiregistrationv1beta1 "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/client/clientset_generated/clientset/typed/apiregistration/v1beta1"
+	fakeapiregistrationv1beta1 "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/client/clientset_generated/clientset/typed/apiregistration/v1beta1/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"

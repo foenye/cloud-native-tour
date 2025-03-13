@@ -19,9 +19,9 @@ limitations under the License.
 package applyconfiguration
 
 import (
-	v1 "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1"
-	corev1 "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/applyconfiguration/core/v1"
-	internal "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/applyconfiguration/internal"
+	v1 "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1"
+	corev1 "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/applyconfiguration/core/v1"
+	internal "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/applyconfiguration/internal"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	testing "k8s.io/client-go/testing"

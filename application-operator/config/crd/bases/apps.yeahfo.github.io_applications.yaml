@@ -4,9 +4,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.17.2
-  name: applications.apps.yeahfo.github.io
+  name: applications.apps.eonvon.github.io
 spec:
-  group: apps.yeahfo.github.io
+  group: apps.eonvon.github.io
   names:
     kind: Application
     listKind: ApplicationList

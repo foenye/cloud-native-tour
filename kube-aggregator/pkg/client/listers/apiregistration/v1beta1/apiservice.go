@@ -19,7 +19,7 @@ limitations under the License.
 package v1beta1
 
 import (
-	apiregistrationv1beta1 "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1"
+	apiregistrationv1beta1 "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	listers "k8s.io/client-go/listers"
 	cache "k8s.io/client-go/tools/cache"

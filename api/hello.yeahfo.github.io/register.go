@@ -1,7 +1,7 @@
-package hello_yeahfo_github_io
+package hello_eonvon_github_io
 
 import (
-	v1 "github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v1"
+	v1 "github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
@@ -26,7 +26,7 @@ func init() {
 // use v1 as hub type for now
 //
 // Normally tree of api types should like
-// - hello.yeahfo.github.io
+// - hello.eonvon.github.io
 //   - v1beta1/{types.go, register.go}
 //   - v1/{types.go, register.go}
 //   - types.go, register.go             <--- hub types and register

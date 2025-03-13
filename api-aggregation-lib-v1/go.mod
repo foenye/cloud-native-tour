@@ -1,12 +1,12 @@
-module github.com/yeahfo/cloud-native-tour/api-aggregation-lib-v1
+module github.com/eonvon/cloud-native-tour/api-aggregation-lib-v1
 
 go 1.23.4
 
-replace github.com/yeahfo/cloud-native-tour/api v1.0.0 => ../api
+replace github.com/eonvon/cloud-native-tour/api v1.0.0 => ../api
 
 require (
 	github.com/spf13/cobra v1.8.1
-	github.com/yeahfo/cloud-native-tour/api v1.0.0
+	github.com/eonvon/cloud-native-tour/api v1.0.0
 	k8s.io/apimachinery v0.32.0
 	k8s.io/apiserver v0.31.3
 	k8s.io/client-go v0.32.0

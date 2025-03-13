@@ -28,18 +28,18 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v1.Foo":          schema_cloud_native_tour_api_helloyeahfogithubio_v1_Foo(ref),
-		"github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v1.FooList":      schema_cloud_native_tour_api_helloyeahfogithubio_v1_FooList(ref),
-		"github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v1.FooSpec":      schema_cloud_native_tour_api_helloyeahfogithubio_v1_FooSpec(ref),
-		"github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2.Foo":          schema_cloud_native_tour_api_helloyeahfogithubio_v2_Foo(ref),
-		"github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2.FooCondition": schema_cloud_native_tour_api_helloyeahfogithubio_v2_FooCondition(ref),
-		"github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2.FooConfig":    schema_cloud_native_tour_api_helloyeahfogithubio_v2_FooConfig(ref),
-		"github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2.FooList":      schema_cloud_native_tour_api_helloyeahfogithubio_v2_FooList(ref),
-		"github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2.FooSpec":      schema_cloud_native_tour_api_helloyeahfogithubio_v2_FooSpec(ref),
-		"github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2.FooStatus":    schema_cloud_native_tour_api_helloyeahfogithubio_v2_FooStatus(ref),
-		"github.com/yeahfo/cloud-native-tour/api/transformation/v1beta1.Base64":          schema_cloud_native_tour_api_transformation_v1beta1_Base64(ref),
-		"github.com/yeahfo/cloud-native-tour/api/transformation/v1beta1.Base64Spec":      schema_cloud_native_tour_api_transformation_v1beta1_Base64Spec(ref),
-		"github.com/yeahfo/cloud-native-tour/api/transformation/v1beta1.Base64Status":    schema_cloud_native_tour_api_transformation_v1beta1_Base64Status(ref),
+		"github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v1.Foo":          schema_cloud_native_tour_api_helloeonvongithubio_v1_Foo(ref),
+		"github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v1.FooList":      schema_cloud_native_tour_api_helloeonvongithubio_v1_FooList(ref),
+		"github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v1.FooSpec":      schema_cloud_native_tour_api_helloeonvongithubio_v1_FooSpec(ref),
+		"github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2.Foo":          schema_cloud_native_tour_api_helloeonvongithubio_v2_Foo(ref),
+		"github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2.FooCondition": schema_cloud_native_tour_api_helloeonvongithubio_v2_FooCondition(ref),
+		"github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2.FooConfig":    schema_cloud_native_tour_api_helloeonvongithubio_v2_FooConfig(ref),
+		"github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2.FooList":      schema_cloud_native_tour_api_helloeonvongithubio_v2_FooList(ref),
+		"github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2.FooSpec":      schema_cloud_native_tour_api_helloeonvongithubio_v2_FooSpec(ref),
+		"github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2.FooStatus":    schema_cloud_native_tour_api_helloeonvongithubio_v2_FooStatus(ref),
+		"github.com/eonvon/cloud-native-tour/api/transformation/v1beta1.Base64":          schema_cloud_native_tour_api_transformation_v1beta1_Base64(ref),
+		"github.com/eonvon/cloud-native-tour/api/transformation/v1beta1.Base64Spec":      schema_cloud_native_tour_api_transformation_v1beta1_Base64Spec(ref),
+		"github.com/eonvon/cloud-native-tour/api/transformation/v1beta1.Base64Status":    schema_cloud_native_tour_api_transformation_v1beta1_Base64Status(ref),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.APIGroup":                                  schema_pkg_apis_meta_v1_APIGroup(ref),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.APIGroupList":                              schema_pkg_apis_meta_v1_APIGroupList(ref),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.APIResource":                               schema_pkg_apis_meta_v1_APIResource(ref),
@@ -96,7 +96,7 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 	}
 }
 
-func schema_cloud_native_tour_api_helloyeahfogithubio_v1_Foo(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_cloud_native_tour_api_helloeonvongithubio_v1_Foo(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -125,7 +125,7 @@ func schema_cloud_native_tour_api_helloyeahfogithubio_v1_Foo(ref common.Referenc
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v1.FooSpec"),
+							Ref:     ref("github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v1.FooSpec"),
 						},
 					},
 				},
@@ -133,11 +133,11 @@ func schema_cloud_native_tour_api_helloyeahfogithubio_v1_Foo(ref common.Referenc
 			},
 		},
 		Dependencies: []string{
-			"github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v1.FooSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v1.FooSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
-func schema_cloud_native_tour_api_helloyeahfogithubio_v1_FooList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_cloud_native_tour_api_helloeonvongithubio_v1_FooList(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -170,7 +170,7 @@ func schema_cloud_native_tour_api_helloyeahfogithubio_v1_FooList(ref common.Refe
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v1.Foo"),
+										Ref:     ref("github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v1.Foo"),
 									},
 								},
 							},
@@ -181,11 +181,11 @@ func schema_cloud_native_tour_api_helloyeahfogithubio_v1_FooList(ref common.Refe
 			},
 		},
 		Dependencies: []string{
-			"github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v1.Foo", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v1.Foo", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
-func schema_cloud_native_tour_api_helloyeahfogithubio_v1_FooSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_cloud_native_tour_api_helloeonvongithubio_v1_FooSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -214,7 +214,7 @@ func schema_cloud_native_tour_api_helloyeahfogithubio_v1_FooSpec(ref common.Refe
 	}
 }
 
-func schema_cloud_native_tour_api_helloyeahfogithubio_v2_Foo(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_cloud_native_tour_api_helloeonvongithubio_v2_Foo(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -243,13 +243,13 @@ func schema_cloud_native_tour_api_helloyeahfogithubio_v2_Foo(ref common.Referenc
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2.FooSpec"),
+							Ref:     ref("github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2.FooSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2.FooStatus"),
+							Ref:     ref("github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2.FooStatus"),
 						},
 					},
 				},
@@ -257,11 +257,11 @@ func schema_cloud_native_tour_api_helloyeahfogithubio_v2_Foo(ref common.Referenc
 			},
 		},
 		Dependencies: []string{
-			"github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2.FooSpec", "github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2.FooStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2.FooSpec", "github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2.FooStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
-func schema_cloud_native_tour_api_helloyeahfogithubio_v2_FooCondition(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_cloud_native_tour_api_helloeonvongithubio_v2_FooCondition(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -288,7 +288,7 @@ func schema_cloud_native_tour_api_helloyeahfogithubio_v2_FooCondition(ref common
 	}
 }
 
-func schema_cloud_native_tour_api_helloyeahfogithubio_v2_FooConfig(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_cloud_native_tour_api_helloeonvongithubio_v2_FooConfig(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -316,7 +316,7 @@ func schema_cloud_native_tour_api_helloyeahfogithubio_v2_FooConfig(ref common.Re
 	}
 }
 
-func schema_cloud_native_tour_api_helloyeahfogithubio_v2_FooList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_cloud_native_tour_api_helloeonvongithubio_v2_FooList(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -349,7 +349,7 @@ func schema_cloud_native_tour_api_helloyeahfogithubio_v2_FooList(ref common.Refe
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2.Foo"),
+										Ref:     ref("github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2.Foo"),
 									},
 								},
 							},
@@ -360,11 +360,11 @@ func schema_cloud_native_tour_api_helloyeahfogithubio_v2_FooList(ref common.Refe
 			},
 		},
 		Dependencies: []string{
-			"github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2.Foo", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2.Foo", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
-func schema_cloud_native_tour_api_helloyeahfogithubio_v2_FooSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_cloud_native_tour_api_helloeonvongithubio_v2_FooSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -382,7 +382,7 @@ func schema_cloud_native_tour_api_helloyeahfogithubio_v2_FooSpec(ref common.Refe
 						SchemaProps: spec.SchemaProps{
 							Description: "Config is the configuration used by foo container",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2.FooConfig"),
+							Ref:         ref("github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2.FooConfig"),
 						},
 					},
 				},
@@ -390,11 +390,11 @@ func schema_cloud_native_tour_api_helloyeahfogithubio_v2_FooSpec(ref common.Refe
 			},
 		},
 		Dependencies: []string{
-			"github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2.FooConfig"},
+			"github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2.FooConfig"},
 	}
 }
 
-func schema_cloud_native_tour_api_helloyeahfogithubio_v2_FooStatus(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_cloud_native_tour_api_helloeonvongithubio_v2_FooStatus(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -421,7 +421,7 @@ func schema_cloud_native_tour_api_helloyeahfogithubio_v2_FooStatus(ref common.Re
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2.FooCondition"),
+										Ref:     ref("github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2.FooCondition"),
 									},
 								},
 							},
@@ -431,7 +431,7 @@ func schema_cloud_native_tour_api_helloyeahfogithubio_v2_FooStatus(ref common.Re
 			},
 		},
 		Dependencies: []string{
-			"github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2.FooCondition"},
+			"github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2.FooCondition"},
 	}
 }
 
@@ -439,7 +439,7 @@ func schema_cloud_native_tour_api_transformation_v1beta1_Base64(ref common.Refer
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
-				Description: "Base64 generates a base64 encoding for a specified Kubernetes object. Base64 is commonly implemented as a subresource for specific Kubernetes kind. For instance, you can find it used in the `/apis/hello.yeahfo.github.io/v2/namespaces/default/foos/myfoo/base64` endpoint.",
+				Description: "Base64 generates a base64 encoding for a specified Kubernetes object. Base64 is commonly implemented as a subresource for specific Kubernetes kind. For instance, you can find it used in the `/apis/hello.eonvon.github.io/v2/namespaces/default/foos/myfoo/base64` endpoint.",
 				Type:        []string{"object"},
 				Properties: map[string]spec.Schema{
 					"kind": {
@@ -465,13 +465,13 @@ func schema_cloud_native_tour_api_transformation_v1beta1_Base64(ref common.Refer
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/yeahfo/cloud-native-tour/api/transformation/v1beta1.Base64Spec"),
+							Ref:     ref("github.com/eonvon/cloud-native-tour/api/transformation/v1beta1.Base64Spec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/yeahfo/cloud-native-tour/api/transformation/v1beta1.Base64Status"),
+							Ref:     ref("github.com/eonvon/cloud-native-tour/api/transformation/v1beta1.Base64Status"),
 						},
 					},
 				},
@@ -479,7 +479,7 @@ func schema_cloud_native_tour_api_transformation_v1beta1_Base64(ref common.Refer
 			},
 		},
 		Dependencies: []string{
-			"github.com/yeahfo/cloud-native-tour/api/transformation/v1beta1.Base64Spec", "github.com/yeahfo/cloud-native-tour/api/transformation/v1beta1.Base64Status", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/eonvon/cloud-native-tour/api/transformation/v1beta1.Base64Spec", "github.com/eonvon/cloud-native-tour/api/transformation/v1beta1.Base64Status", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 

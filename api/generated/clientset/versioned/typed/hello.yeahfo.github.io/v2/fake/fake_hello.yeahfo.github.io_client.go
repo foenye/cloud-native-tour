@@ -18,7 +18,7 @@ limitations under the License.
 package fake
 
 import (
-	v2 "github.com/yeahfo/cloud-native-tour/api/generated/clientset/versioned/typed/hello.yeahfo.github.io/v2"
+	v2 "github.com/eonvon/cloud-native-tour/api/generated/clientset/versioned/typed/hello.eonvon.github.io/v2"
 	rest "k8s.io/client-go/rest"
 	testing "k8s.io/client-go/testing"
 )

@@ -18,9 +18,9 @@ limitations under the License.
 package hello
 
 import (
-	v1 "github.com/yeahfo/cloud-native-tour/api/generated/informers/externalversions/hello.yeahfo.github.io/v1"
-	v2 "github.com/yeahfo/cloud-native-tour/api/generated/informers/externalversions/hello.yeahfo.github.io/v2"
-	internalinterfaces "github.com/yeahfo/cloud-native-tour/api/generated/informers/externalversions/internalinterfaces"
+	v1 "github.com/eonvon/cloud-native-tour/api/generated/informers/externalversions/hello.eonvon.github.io/v1"
+	v2 "github.com/eonvon/cloud-native-tour/api/generated/informers/externalversions/hello.eonvon.github.io/v2"
+	internalinterfaces "github.com/eonvon/cloud-native-tour/api/generated/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to each of this group's versions.

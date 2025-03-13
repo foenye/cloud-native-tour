@@ -3,7 +3,7 @@ package foo
 import (
 	"context"
 	"fmt"
-	hellov1 "github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v1"
+	hellov1 "github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/api/meta"
 	"k8s.io/apimachinery/pkg/apis/meta/internalversion"

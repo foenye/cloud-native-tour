@@ -21,9 +21,9 @@ package v1
 import (
 	context "context"
 
-	corev1 "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1"
-	applyconfigurationcorev1 "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/applyconfiguration/core/v1"
-	scheme "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/clientset/versioned/scheme"
+	corev1 "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1"
+	applyconfigurationcorev1 "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/applyconfiguration/core/v1"
+	scheme "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/clientset/versioned/scheme"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"

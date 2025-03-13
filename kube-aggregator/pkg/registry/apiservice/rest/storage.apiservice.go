@@ -1,10 +1,10 @@
 package rest
 
 import (
-	"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration"
-	apiregistrationv1 "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1"
-	aggregateorscheme "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apiserver/scheme"
-	"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/registry/apiservice/etcd"
+	"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration"
+	apiregistrationv1 "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1"
+	aggregateorscheme "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apiserver/scheme"
+	"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/registry/apiservice/etcd"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apiserver/pkg/registry/generic"
 	"k8s.io/apiserver/pkg/registry/rest"

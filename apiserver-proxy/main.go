@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/yeahfo/cloud-native-tour/apiserver-proxy/pkg/cmd"
+	"github.com/eonvon/cloud-native-tour/apiserver-proxy/pkg/cmd"
 	"k8s.io/apiserver/pkg/server"
 	"k8s.io/component-base/cli"
 	"os"

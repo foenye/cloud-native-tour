@@ -18,21 +18,21 @@ limitations under the License.
 package fake
 
 import (
-	helloyeahfogithubiov2 "github.com/yeahfo/cloud-native-tour/api/generated/applyconfiguration/hello.yeahfo.github.io/v2"
-	typedhelloyeahfogithubiov2 "github.com/yeahfo/cloud-native-tour/api/generated/clientset/versioned/typed/hello.yeahfo.github.io/v2"
-	v2 "github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2"
+	helloeonvongithubiov2 "github.com/eonvon/cloud-native-tour/api/generated/applyconfiguration/hello.eonvon.github.io/v2"
+	typedhelloeonvongithubiov2 "github.com/eonvon/cloud-native-tour/api/generated/clientset/versioned/typed/hello.eonvon.github.io/v2"
+	v2 "github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2"
 	gentype "k8s.io/client-go/gentype"
 )
 
 // fakeFoos implements FooInterface
 type fakeFoos struct {
-	*gentype.FakeClientWithListAndApply[*v2.Foo, *v2.FooList, *helloyeahfogithubiov2.FooApplyConfiguration]
+	*gentype.FakeClientWithListAndApply[*v2.Foo, *v2.FooList, *helloeonvongithubiov2.FooApplyConfiguration]
 	Fake *FakeHelloV2
 }
 
-func newFakeFoos(fake *FakeHelloV2, namespace string) typedhelloyeahfogithubiov2.FooInterface {
+func newFakeFoos(fake *FakeHelloV2, namespace string) typedhelloeonvongithubiov2.FooInterface {
 	return &fakeFoos{
-		gentype.NewFakeClientWithListAndApply[*v2.Foo, *v2.FooList, *helloyeahfogithubiov2.FooApplyConfiguration](
+		gentype.NewFakeClientWithListAndApply[*v2.Foo, *v2.FooList, *helloeonvongithubiov2.FooApplyConfiguration](
 			fake.Fake,
 			namespace,
 			v2.SchemeGroupVersion.WithResource("foos"),

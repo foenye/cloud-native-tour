@@ -19,7 +19,7 @@ package aggregator
 import (
 	"bytes"
 	"encoding/json"
-	v1 "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1"
+	v1 "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1"
 	"net/http"
 	"strings"
 	"testing"
@@ -192,11 +192,11 @@ func TestV3APIService(t *testing.T) {
 func TestV3RootAPIService(t *testing.T) {
 	ws := new(restful.WebService)
 	{
-		ws.Path("/apis/apiregistration.yeahfo.github.io/v1")
-		ws.Doc("API at/apis/apiregistration.yeahfo.github.io/v1 ")
+		ws.Path("/apis/apiregistration.eonvon.github.io/v1")
+		ws.Doc("API at/apis/apiregistration.eonvon.github.io/v1 ")
 		ws.Consumes("*/*")
 		ws.Produces("application/json")
-		ws.ApiVersion("apiregistration.yeahfo.github.io/v1")
+		ws.ApiVersion("apiregistration.eonvon.github.io/v1")
 		routeBuilder := ws.GET("apiservices").
 			To(func(request *restful.Request, response *restful.Response) {}).
 			Doc("list or watch objects of kind APIService").
@@ -217,16 +217,16 @@ func TestV3RootAPIService(t *testing.T) {
 	if err != nil {
 		t.Error(err)
 	}
-	expectedSpecJSON := []byte(`{"openapi":"3.0.0","info":{"title":"Generic API Server"},"paths":{"/apis/apiregistration.yeahfo.github.io/v1/apiservices":{"get":{"tags":["apiregistrationYeahfoGithubIo_v1"],"description":"list or watch objects of kind APIService","operationId":"listApiregistrationYeahfoGithubIoV1APIService","responses":{"200":{"description":"OK","content":{"application/json":{"schema":{"$ref":"#/components/schemas/com.github.yeahfo.cloud-native-tour.kube-aggregator.pkg.apis.apiregistration.v1.APIService"}}}}}}}},"components":{"schemas":{"com.github.yeahfo.cloud-native-tour.kube-aggregator.pkg.apis.apiregistration.v1.APIService":{"description":"APIService represents a server for a particular GroupVersion. Name must be \"version.group\".","type":"object"}}}}`)
+	expectedSpecJSON := []byte(`{"openapi":"3.0.0","info":{"title":"Generic API Server"},"paths":{"/apis/apiregistration.eonvon.github.io/v1/apiservices":{"get":{"tags":["apiregistrationeonvonGithubIo_v1"],"description":"list or watch objects of kind APIService","operationId":"listApiregistrationeonvonGithubIoV1APIService","responses":{"200":{"description":"OK","content":{"application/json":{"schema":{"$ref":"#/components/schemas/com.github.eonvon.cloud-native-tour.kube-aggregator.pkg.apis.apiregistration.v1.APIService"}}}}}}}},"components":{"schemas":{"com.github.eonvon.cloud-native-tour.kube-aggregator.pkg.apis.apiregistration.v1.APIService":{"description":"APIService represents a server for a particular GroupVersion. Name must be \"version.group\".","type":"object"}}}}`)
 
 	data := sendReq(t, serveHandler, "/openapi/v3")
 	groupVersionList := handler3.OpenAPIV3Discovery{}
 	if err := json.Unmarshal(data, &groupVersionList); err != nil {
 		t.Fatal(err)
 	}
-	path, ok := groupVersionList.Paths["apis/apiregistration.yeahfo.github.io/v1"]
+	path, ok := groupVersionList.Paths["apis/apiregistration.eonvon.github.io/v1"]
 	if !ok {
-		t.Error("Expected apiregistration.yeahfo.github.io/v1 to be in group version list")
+		t.Error("Expected apiregistration.eonvon.github.io/v1 to be in group version list")
 	}
 	gotSpecJSON := sendReq(t, serveHandler, path.ServerRelativeURL)
 	if bytes.Compare(gotSpecJSON, expectedSpecJSON) != 0 {
@@ -309,7 +309,7 @@ func sendReq(t *testing.T, handler http.Handler, path string) []byte {
 
 func getTestAPIServiceOpenAPIDefinitions(_ openapicommon.ReferenceCallback) map[string]openapicommon.OpenAPIDefinition {
 	return map[string]openapicommon.OpenAPIDefinition{
-		"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIService": buildTestAPIServiceOpenAPIDefinition(),
+		"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIService": buildTestAPIServiceOpenAPIDefinition(),
 	}
 }
 

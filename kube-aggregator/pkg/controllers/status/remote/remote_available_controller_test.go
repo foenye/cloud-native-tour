@@ -2,11 +2,11 @@ package remote
 
 import (
 	"fmt"
-	apiregistrationv1 "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1"
-	"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/client/clientset_generated/clientset/fake"
-	generatedClientsetTypedV1 "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/client/clientset_generated/clientset/typed/apiregistration/v1"
-	generatedClientListersV1 "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/client/listers/apiregistration/v1"
-	"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/controllers/status/metrics"
+	apiregistrationv1 "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1"
+	"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/client/clientset_generated/clientset/fake"
+	generatedClientsetTypedV1 "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/client/clientset_generated/clientset/typed/apiregistration/v1"
+	generatedClientListersV1 "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/client/listers/apiregistration/v1"
+	"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/controllers/status/metrics"
 	"net/http"
 	"net/http/httptest"
 	"net/url"

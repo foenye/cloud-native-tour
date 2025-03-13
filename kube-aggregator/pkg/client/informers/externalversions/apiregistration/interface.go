@@ -19,9 +19,9 @@ limitations under the License.
 package apiregistration
 
 import (
-	v1 "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/client/informers/externalversions/apiregistration/v1"
-	v1beta1 "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/client/informers/externalversions/apiregistration/v1beta1"
-	internalinterfaces "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/client/informers/externalversions/internalinterfaces"
+	v1 "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/client/informers/externalversions/apiregistration/v1"
+	v1beta1 "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/client/informers/externalversions/apiregistration/v1beta1"
+	internalinterfaces "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/client/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to each of this group's versions.

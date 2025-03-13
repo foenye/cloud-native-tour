@@ -1,4 +1,4 @@
-module github.com/yeahfo/cloud-native-tour/apiserver-from-scratch
+module github.com/eonvon/cloud-native-tour/apiserver-from-scratch
 
 go 1.23.3
 

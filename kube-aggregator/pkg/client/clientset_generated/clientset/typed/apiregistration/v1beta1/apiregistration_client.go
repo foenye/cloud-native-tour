@@ -21,8 +21,8 @@ package v1beta1
 import (
 	http "net/http"
 
-	apiregistrationv1beta1 "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1"
-	scheme "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/client/clientset_generated/clientset/scheme"
+	apiregistrationv1beta1 "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1"
+	scheme "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/client/clientset_generated/clientset/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -31,7 +31,7 @@ type ApiregistrationV1beta1Interface interface {
 	APIServicesGetter
 }
 
-// ApiregistrationV1beta1Client is used to interact with features provided by the apiregistration.yeahfo.github.io group.
+// ApiregistrationV1beta1Client is used to interact with features provided by the apiregistration.eonvon.github.io group.
 type ApiregistrationV1beta1Client struct {
 	restClient rest.Interface
 }

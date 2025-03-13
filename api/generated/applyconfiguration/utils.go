@@ -18,11 +18,11 @@ limitations under the License.
 package applyconfiguration
 
 import (
-	helloyeahfogithubiov1 "github.com/yeahfo/cloud-native-tour/api/generated/applyconfiguration/hello.yeahfo.github.io/v1"
-	helloyeahfogithubiov2 "github.com/yeahfo/cloud-native-tour/api/generated/applyconfiguration/hello.yeahfo.github.io/v2"
-	internal "github.com/yeahfo/cloud-native-tour/api/generated/applyconfiguration/internal"
-	v1 "github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v1"
-	v2 "github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2"
+	helloeonvongithubiov1 "github.com/eonvon/cloud-native-tour/api/generated/applyconfiguration/hello.eonvon.github.io/v1"
+	helloeonvongithubiov2 "github.com/eonvon/cloud-native-tour/api/generated/applyconfiguration/hello.eonvon.github.io/v2"
+	internal "github.com/eonvon/cloud-native-tour/api/generated/applyconfiguration/internal"
+	v1 "github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v1"
+	v2 "github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	testing "k8s.io/client-go/testing"
@@ -32,23 +32,23 @@ import (
 // apply configuration type exists for the given GroupVersionKind.
 func ForKind(kind schema.GroupVersionKind) interface{} {
 	switch kind {
-	// Group=hello.yeahfo.github.io, Version=v1
+	// Group=hello.eonvon.github.io, Version=v1
 	case v1.SchemeGroupVersion.WithKind("Foo"):
-		return &helloyeahfogithubiov1.FooApplyConfiguration{}
+		return &helloeonvongithubiov1.FooApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("FooSpec"):
-		return &helloyeahfogithubiov1.FooSpecApplyConfiguration{}
+		return &helloeonvongithubiov1.FooSpecApplyConfiguration{}
 
-		// Group=hello.yeahfo.github.io, Version=v2
+		// Group=hello.eonvon.github.io, Version=v2
 	case v2.SchemeGroupVersion.WithKind("Foo"):
-		return &helloyeahfogithubiov2.FooApplyConfiguration{}
+		return &helloeonvongithubiov2.FooApplyConfiguration{}
 	case v2.SchemeGroupVersion.WithKind("FooCondition"):
-		return &helloyeahfogithubiov2.FooConditionApplyConfiguration{}
+		return &helloeonvongithubiov2.FooConditionApplyConfiguration{}
 	case v2.SchemeGroupVersion.WithKind("FooConfig"):
-		return &helloyeahfogithubiov2.FooConfigApplyConfiguration{}
+		return &helloeonvongithubiov2.FooConfigApplyConfiguration{}
 	case v2.SchemeGroupVersion.WithKind("FooSpec"):
-		return &helloyeahfogithubiov2.FooSpecApplyConfiguration{}
+		return &helloeonvongithubiov2.FooSpecApplyConfiguration{}
 	case v2.SchemeGroupVersion.WithKind("FooStatus"):
-		return &helloyeahfogithubiov2.FooStatusApplyConfiguration{}
+		return &helloeonvongithubiov2.FooStatusApplyConfiguration{}
 
 	}
 	return nil

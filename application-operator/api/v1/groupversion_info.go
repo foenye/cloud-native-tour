@@ -1,5 +1,5 @@
 /*
-Copyright 2025 Yeahfo.
+Copyright 2025 eonvon.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@ limitations under the License.
 
 // Package v1 contains API Schema definitions for the apps v1 API group.
 // +kubebuilder:object:generate=true
-// +groupName=apps.yeahfo.github.io
+// +groupName=apps.eonvon.github.io
 package v1
 
 import (
@@ -26,7 +26,7 @@ import (
 
 var (
 	// GroupVersion is group version used to register these objects.
-	GroupVersion = schema.GroupVersion{Group: "apps.yeahfo.github.io", Version: "v1"}
+	GroupVersion = schema.GroupVersion{Group: "apps.eonvon.github.io", Version: "v1"}
 
 	// SchemeBuilder is used to add go types to the GroupVersionKind scheme.
 	SchemeBuilder = &scheme.Builder{GroupVersion: GroupVersion}

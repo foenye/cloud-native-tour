@@ -3,8 +3,8 @@ package openapiv3
 import (
 	"errors"
 	"fmt"
-	apiregistrationv1 "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1"
-	"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/controllers/openapiv3/aggregator"
+	apiregistrationv1 "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1"
+	"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/controllers/openapiv3/aggregator"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 	"k8s.io/apimachinery/pkg/util/wait"
 	"k8s.io/client-go/util/workqueue"

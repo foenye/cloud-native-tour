@@ -20,8 +20,8 @@ package v2
 import (
 	http "net/http"
 
-	scheme "github.com/yeahfo/cloud-native-tour/api/generated/clientset/versioned/scheme"
-	helloyeahfogithubiov2 "github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2"
+	scheme "github.com/eonvon/cloud-native-tour/api/generated/clientset/versioned/scheme"
+	helloeonvongithubiov2 "github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -30,7 +30,7 @@ type HelloV2Interface interface {
 	FoosGetter
 }
 
-// HelloV2Client is used to interact with features provided by the hello.yeahfo.github.io group.
+// HelloV2Client is used to interact with features provided by the hello.eonvon.github.io group.
 type HelloV2Client struct {
 	restClient rest.Interface
 }
@@ -84,7 +84,7 @@ func New(c rest.Interface) *HelloV2Client {
 }
 
 func setConfigDefaults(config *rest.Config) error {
-	gv := helloyeahfogithubiov2.SchemeGroupVersion
+	gv := helloeonvongithubiov2.SchemeGroupVersion
 	config.GroupVersion = &gv
 	config.APIPath = "/apis"
 	config.NegotiatedSerializer = rest.CodecFactoryForGeneratedClient(scheme.Scheme, scheme.Codecs).WithoutConversion()

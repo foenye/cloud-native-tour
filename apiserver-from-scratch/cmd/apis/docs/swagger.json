@@ -2,7 +2,7 @@
     "swagger": "2.0",
     "info": {
         "description": "K8s apiserver style http server from scratch",
-        "title": "hello.yeahfo.github.io-server",
+        "title": "hello.eonvon.github.io-server",
         "contact": {},
         "version": "0.1"
     },
@@ -25,13 +25,13 @@
                 }
             }
         },
-        "/apis/hello.yeahfo.github.io": {
+        "/apis/hello.eonvon.github.io": {
             "get": {
-                "description": "Get APIGroupHelloV1 'hello.yeahfo.github.io' detail, including version list and preferred version",
+                "description": "Get APIGroupHelloV1 'hello.eonvon.github.io' detail, including version list and preferred version",
                 "produces": [
                     "application/json"
                 ],
-                "summary": "Get APIGroupHelloV1 info of 'hello.yeahfo.github.io'",
+                "summary": "Get APIGroupHelloV1 info of 'hello.eonvon.github.io'",
                 "responses": {
                     "200": {
                         "description": "OK",
@@ -42,13 +42,13 @@
                 }
             }
         },
-        "/apis/hello.yeahfo.github.io/v1": {
+        "/apis/hello.eonvon.github.io/v1": {
             "get": {
-                "description": "List APIResource Info about group version 'hello.yeahfo.github.io/v1'",
+                "description": "List APIResource Info about group version 'hello.eonvon.github.io/v1'",
                 "produces": [
                     "application/json"
                 ],
-                "summary": "Get APIGroupHelloV1Resources for group version 'hello.yeahfo.github.io/v1'",
+                "summary": "Get APIGroupHelloV1Resources for group version 'hello.eonvon.github.io/v1'",
                 "responses": {
                     "200": {
                         "description": "OK",
@@ -59,7 +59,7 @@
                 }
             }
         },
-        "/apis/hello.yeahfo.github.io/v1/foos": {
+        "/apis/hello.eonvon.github.io/v1/foos": {
             "get": {
                 "description": "List all Foos",
                 "produces": [
@@ -79,7 +79,7 @@
                 }
             }
         },
-        "/apis/hello.yeahfo.github.io/v1/namespaces/{namespace}/foos": {
+        "/apis/hello.eonvon.github.io/v1/namespaces/{namespace}/foos": {
             "get": {
                 "description": "List all Foos in some namespace",
                 "produces": [
@@ -135,7 +135,7 @@
                 }
             }
         },
-        "/apis/hello.yeahfo.github.io/v1/namespaces/{namespace}/foos/{name}": {
+        "/apis/hello.eonvon.github.io/v1/namespaces/{namespace}/foos/{name}": {
             "get": {
                 "description": "Get one Foo by Resource Name",
                 "produces": [

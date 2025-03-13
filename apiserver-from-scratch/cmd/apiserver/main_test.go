@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"encoding/json"
-	"github.com/yeahfo/cloud-native-tour/apiserver-from-scratch/cmd/foos"
+	"github.com/eonvon/cloud-native-tour/apiserver-from-scratch/cmd/foos"
 	"k8s.io/apimachinery/pkg/api/meta"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
@@ -41,9 +41,9 @@ func TestDiscovery(t *testing.T) {
 		{
 			name:                    `When GroupVersionResource is ("", "", "fo") and RESTMapper is ShortcutExpander`,
 			srcGroupVersionResource: schema.GroupVersionResource{Resource: "fo"},
-			targetGroupVersionResource: schema.GroupVersionResource{Group: "hello.yeahfo.github.io", Version: "v1",
+			targetGroupVersionResource: schema.GroupVersionResource{Group: "hello.eonvon.github.io", Version: "v1",
 				Resource: "foos"},
-			targetGroupVersionKind: schema.GroupVersionKind{Group: "hello.yeahfo.github.io", Version: "v1", Kind: "Foo"},
+			targetGroupVersionKind: schema.GroupVersionKind{Group: "hello.eonvon.github.io", Version: "v1", Kind: "Foo"},
 			mapperFn: func() meta.RESTMapper {
 				return shortcutExpander
 			},
@@ -52,9 +52,9 @@ func TestDiscovery(t *testing.T) {
 		{
 			name:                    `When GroupVersionResource is ("", "", "fo") and RESTMapper is DiscoveryRESTMapper`,
 			srcGroupVersionResource: schema.GroupVersionResource{Resource: "fo"},
-			targetGroupVersionResource: schema.GroupVersionResource{Group: "hello.yeahfo.github.io", Version: "v1",
+			targetGroupVersionResource: schema.GroupVersionResource{Group: "hello.eonvon.github.io", Version: "v1",
 				Resource: "foos"},
-			targetGroupVersionKind: schema.GroupVersionKind{Group: "hello.yeahfo.github.io", Version: "v1", Kind: "Foo"},
+			targetGroupVersionKind: schema.GroupVersionKind{Group: "hello.eonvon.github.io", Version: "v1", Kind: "Foo"},
 			mapperFn: func() meta.RESTMapper {
 				return discoveryRESTMapper
 			},
@@ -63,9 +63,9 @@ func TestDiscovery(t *testing.T) {
 		{
 			name:                    `When GroupVersionResource is ("", "", "foo") and RESTMapper is DiscoveryRESTMapper`,
 			srcGroupVersionResource: schema.GroupVersionResource{Resource: "foo"},
-			targetGroupVersionResource: schema.GroupVersionResource{Group: "hello.yeahfo.github.io", Version: "v1",
+			targetGroupVersionResource: schema.GroupVersionResource{Group: "hello.eonvon.github.io", Version: "v1",
 				Resource: "foos"},
-			targetGroupVersionKind: schema.GroupVersionKind{Group: "hello.yeahfo.github.io", Version: "v1", Kind: "Foo"},
+			targetGroupVersionKind: schema.GroupVersionKind{Group: "hello.eonvon.github.io", Version: "v1", Kind: "Foo"},
 			mapperFn: func() meta.RESTMapper {
 				return discoveryRESTMapper
 			},
@@ -74,9 +74,9 @@ func TestDiscovery(t *testing.T) {
 		{
 			name:                    `When GroupVersionResource is ("", "", "foos") and RESTMapper is DiscoveryRESTMapper`,
 			srcGroupVersionResource: schema.GroupVersionResource{Resource: "foos"},
-			targetGroupVersionResource: schema.GroupVersionResource{Group: "hello.yeahfo.github.io", Version: "v1",
+			targetGroupVersionResource: schema.GroupVersionResource{Group: "hello.eonvon.github.io", Version: "v1",
 				Resource: "foos"},
-			targetGroupVersionKind: schema.GroupVersionKind{Group: "hello.yeahfo.github.io", Version: "v1", Kind: "Foo"},
+			targetGroupVersionKind: schema.GroupVersionKind{Group: "hello.eonvon.github.io", Version: "v1", Kind: "Foo"},
 			mapperFn: func() meta.RESTMapper {
 				return discoveryRESTMapper
 			},
@@ -121,7 +121,7 @@ func TestFooAPIs(t *testing.T) {
 	kube := kubernetes.NewForConfigOrDie(&rest.Config{Host: server.URL})
 
 	restClient := kube.RESTClient()
-	result := restClient.Verb(http.MethodGet).Prefix("apis", "hello.yeahfo.github.io", "v1").
+	result := restClient.Verb(http.MethodGet).Prefix("apis", "hello.eonvon.github.io", "v1").
 		Namespace(metav1.NamespaceDefault).Resource("foos").Name("bar").Do(context.Background())
 	if err := result.Error(); err != nil {
 		t.Fatalf("RESTGetFoo() error = %v", err)
@@ -140,7 +140,7 @@ func TestFooAPIs(t *testing.T) {
 		},
 	})
 	var created = foos.Foo{}
-	err := restClient.Verb(http.MethodPost).Prefix("apis", "hello.yeahfo.github.io", "v1").
+	err := restClient.Verb(http.MethodPost).Prefix("apis", "hello.eonvon.github.io", "v1").
 		Namespace(metav1.NamespaceDefault).Resource("foos").Body(createFooCommand).Do(context.Background()).Into(&created)
 	if err != nil {
 		t.Fatalf("RESTCreateFoo() error=%v", err)
@@ -160,7 +160,7 @@ func TestFooAPIs(t *testing.T) {
 			Msg: "Ah ah ah",
 		},
 	})
-	err = restClient.Verb(http.MethodPatch).Prefix("apis", "hello.yeahfo.github.io", "v1").
+	err = restClient.Verb(http.MethodPatch).Prefix("apis", "hello.eonvon.github.io", "v1").
 		SetHeader("Content-Type", "application/strategic-merge-patch+json").
 		Namespace(metav1.NamespaceDefault).Resource("foos").Name("newFoo").Body(patchFooCommand).
 		Do(context.Background()).Into(&patched)
@@ -168,7 +168,7 @@ func TestFooAPIs(t *testing.T) {
 		t.Fatalf("RESTReviseFoo() error = %v", err)
 	}
 
-	err = restClient.Verb(http.MethodDelete).Prefix("apis", "hello.yeahfo.github.io", "v1").
+	err = restClient.Verb(http.MethodDelete).Prefix("apis", "hello.eonvon.github.io", "v1").
 		Namespace(metav1.NamespaceDefault).Resource("foos").Name("newFoo").Do(context.Background()).Into(&foos.Foo{})
 	if err != nil {
 		t.Fatalf("RESTDeleteFoo error = %v", err)

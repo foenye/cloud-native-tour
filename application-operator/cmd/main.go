@@ -1,5 +1,5 @@
 /*
-Copyright 2025 Yeahfo.
+Copyright 2025 eonvon.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -37,8 +37,8 @@ import (
 	metricsserver "sigs.k8s.io/controller-runtime/pkg/metrics/server"
 	"sigs.k8s.io/controller-runtime/pkg/webhook"
 
-	applicationv1 "github.com/yeahfo/cloud-native-tour/application-operator/api/v1"
-	"github.com/yeahfo/cloud-native-tour/application-operator/internal/controller"
+	applicationv1 "github.com/eonvon/cloud-native-tour/application-operator/api/v1"
+	"github.com/eonvon/cloud-native-tour/application-operator/internal/controller"
 	// +kubebuilder:scaffold:imports
 )
 
@@ -184,7 +184,7 @@ func main() {
 		WebhookServer:          webhookServer,
 		HealthProbeBindAddress: probeAddr,
 		LeaderElection:         enableLeaderElection,
-		LeaderElectionID:       "c9fced2b.yeahfo.github.io",
+		LeaderElectionID:       "c9fced2b.eonvon.github.io",
 		// LeaderElectionReleaseOnCancel defines if the leader should step down voluntarily
 		// when the Manager ends. This requires the binary to immediately end when the
 		// Manager is stopped, otherwise, this setting is unsafe. Setting this significantly

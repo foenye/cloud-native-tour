@@ -1,7 +1,7 @@
 package scheme
 
 import (
-	"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/install"
+	"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/install"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 )

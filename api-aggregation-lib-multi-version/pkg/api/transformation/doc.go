@@ -1,6 +1,6 @@
 /**/
 
 // +k8s:deepcopy-gen=package,register
-// +groupName=transformation.yeahfo.github.io
+// +groupName=transformation.eonvon.github.io
 
 package transformation

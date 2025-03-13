@@ -18,8 +18,8 @@ limitations under the License.
 package scheme
 
 import (
-	hellov1 "github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v1"
-	hellov2 "github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2"
+	hellov1 "github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v1"
+	hellov2 "github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

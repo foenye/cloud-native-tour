@@ -3,8 +3,8 @@ package etcd
 import (
 	"context"
 	"fmt"
-	"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration"
-	"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/registry/apiservice"
+	"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration"
+	"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/registry/apiservice"
 	"k8s.io/apimachinery/pkg/api/meta"
 	metatable "k8s.io/apimachinery/pkg/api/meta/table"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

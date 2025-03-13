@@ -23,9 +23,9 @@ import (
 	sync "sync"
 	time "time"
 
-	clientset "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/client/clientset_generated/clientset"
-	apiregistration "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/client/informers/externalversions/apiregistration"
-	internalinterfaces "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/client/informers/externalversions/internalinterfaces"
+	clientset "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/client/clientset_generated/clientset"
+	apiregistration "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/client/informers/externalversions/apiregistration"
+	internalinterfaces "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/client/informers/externalversions/internalinterfaces"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

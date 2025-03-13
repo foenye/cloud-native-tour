@@ -22,7 +22,7 @@ import (
 	fmt "fmt"
 	http "net/http"
 
-	corev1 "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/clientset/versioned/typed/core/v1"
+	corev1 "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/clientset/versioned/typed/core/v1"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"

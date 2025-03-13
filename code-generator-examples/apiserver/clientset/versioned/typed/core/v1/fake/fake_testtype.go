@@ -19,9 +19,9 @@ limitations under the License.
 package fake
 
 import (
-	v1 "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1"
-	corev1 "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/applyconfiguration/core/v1"
-	typedcorev1 "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/clientset/versioned/typed/core/v1"
+	v1 "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1"
+	corev1 "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/applyconfiguration/core/v1"
+	typedcorev1 "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/clientset/versioned/typed/core/v1"
 	gentype "k8s.io/client-go/gentype"
 )
 

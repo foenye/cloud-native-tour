@@ -7,7 +7,7 @@ import (
 )
 
 // GroupName specifies the group name used to register the objects.
-const GroupName = "apiregistration.yeahfo.github.io"
+const GroupName = "apiregistration.eonvon.github.io"
 
 // GroupVersion specifies the group and the version used to register the objects.
 var GroupVersion = metav1.GroupVersion{Group: GroupName, Version: "v1beta1"}

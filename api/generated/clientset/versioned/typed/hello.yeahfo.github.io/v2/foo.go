@@ -20,9 +20,9 @@ package v2
 import (
 	context "context"
 
-	applyconfigurationhelloyeahfogithubiov2 "github.com/yeahfo/cloud-native-tour/api/generated/applyconfiguration/hello.yeahfo.github.io/v2"
-	scheme "github.com/yeahfo/cloud-native-tour/api/generated/clientset/versioned/scheme"
-	helloyeahfogithubiov2 "github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2"
+	applyconfigurationhelloeonvongithubiov2 "github.com/eonvon/cloud-native-tour/api/generated/applyconfiguration/hello.eonvon.github.io/v2"
+	scheme "github.com/eonvon/cloud-native-tour/api/generated/clientset/versioned/scheme"
+	helloeonvongithubiov2 "github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
@@ -37,38 +37,38 @@ type FoosGetter interface {
 
 // FooInterface has methods to work with Foo resources.
 type FooInterface interface {
-	Create(ctx context.Context, foo *helloyeahfogithubiov2.Foo, opts v1.CreateOptions) (*helloyeahfogithubiov2.Foo, error)
-	Update(ctx context.Context, foo *helloyeahfogithubiov2.Foo, opts v1.UpdateOptions) (*helloyeahfogithubiov2.Foo, error)
+	Create(ctx context.Context, foo *helloeonvongithubiov2.Foo, opts v1.CreateOptions) (*helloeonvongithubiov2.Foo, error)
+	Update(ctx context.Context, foo *helloeonvongithubiov2.Foo, opts v1.UpdateOptions) (*helloeonvongithubiov2.Foo, error)
 	// Add a +genclient:noStatus comment above the type to avoid generating UpdateStatus().
-	UpdateStatus(ctx context.Context, foo *helloyeahfogithubiov2.Foo, opts v1.UpdateOptions) (*helloyeahfogithubiov2.Foo, error)
+	UpdateStatus(ctx context.Context, foo *helloeonvongithubiov2.Foo, opts v1.UpdateOptions) (*helloeonvongithubiov2.Foo, error)
 	Delete(ctx context.Context, name string, opts v1.DeleteOptions) error
 	DeleteCollection(ctx context.Context, opts v1.DeleteOptions, listOpts v1.ListOptions) error
-	Get(ctx context.Context, name string, opts v1.GetOptions) (*helloyeahfogithubiov2.Foo, error)
-	List(ctx context.Context, opts v1.ListOptions) (*helloyeahfogithubiov2.FooList, error)
+	Get(ctx context.Context, name string, opts v1.GetOptions) (*helloeonvongithubiov2.Foo, error)
+	List(ctx context.Context, opts v1.ListOptions) (*helloeonvongithubiov2.FooList, error)
 	Watch(ctx context.Context, opts v1.ListOptions) (watch.Interface, error)
-	Patch(ctx context.Context, name string, pt types.PatchType, data []byte, opts v1.PatchOptions, subresources ...string) (result *helloyeahfogithubiov2.Foo, err error)
-	Apply(ctx context.Context, foo *applyconfigurationhelloyeahfogithubiov2.FooApplyConfiguration, opts v1.ApplyOptions) (result *helloyeahfogithubiov2.Foo, err error)
+	Patch(ctx context.Context, name string, pt types.PatchType, data []byte, opts v1.PatchOptions, subresources ...string) (result *helloeonvongithubiov2.Foo, err error)
+	Apply(ctx context.Context, foo *applyconfigurationhelloeonvongithubiov2.FooApplyConfiguration, opts v1.ApplyOptions) (result *helloeonvongithubiov2.Foo, err error)
 	// Add a +genclient:noStatus comment above the type to avoid generating ApplyStatus().
-	ApplyStatus(ctx context.Context, foo *applyconfigurationhelloyeahfogithubiov2.FooApplyConfiguration, opts v1.ApplyOptions) (result *helloyeahfogithubiov2.Foo, err error)
+	ApplyStatus(ctx context.Context, foo *applyconfigurationhelloeonvongithubiov2.FooApplyConfiguration, opts v1.ApplyOptions) (result *helloeonvongithubiov2.Foo, err error)
 	FooExpansion
 }
 
 // foos implements FooInterface
 type foos struct {
-	*gentype.ClientWithListAndApply[*helloyeahfogithubiov2.Foo, *helloyeahfogithubiov2.FooList, *applyconfigurationhelloyeahfogithubiov2.FooApplyConfiguration]
+	*gentype.ClientWithListAndApply[*helloeonvongithubiov2.Foo, *helloeonvongithubiov2.FooList, *applyconfigurationhelloeonvongithubiov2.FooApplyConfiguration]
 }
 
 // newFoos returns a Foos
 func newFoos(c *HelloV2Client, namespace string) *foos {
 	return &foos{
-		gentype.NewClientWithListAndApply[*helloyeahfogithubiov2.Foo, *helloyeahfogithubiov2.FooList, *applyconfigurationhelloyeahfogithubiov2.FooApplyConfiguration](
+		gentype.NewClientWithListAndApply[*helloeonvongithubiov2.Foo, *helloeonvongithubiov2.FooList, *applyconfigurationhelloeonvongithubiov2.FooApplyConfiguration](
 			"foos",
 			c.RESTClient(),
 			scheme.ParameterCodec,
 			namespace,
-			func() *helloyeahfogithubiov2.Foo { return &helloyeahfogithubiov2.Foo{} },
-			func() *helloyeahfogithubiov2.FooList { return &helloyeahfogithubiov2.FooList{} },
-			gentype.PrefersProtobuf[*helloyeahfogithubiov2.Foo](),
+			func() *helloeonvongithubiov2.Foo { return &helloeonvongithubiov2.Foo{} },
+			func() *helloeonvongithubiov2.FooList { return &helloeonvongithubiov2.FooList{} },
+			gentype.PrefersProtobuf[*helloeonvongithubiov2.Foo](),
 		),
 	}
 }

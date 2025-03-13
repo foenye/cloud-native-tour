@@ -3,7 +3,7 @@ package apis
 import (
 	"embed"
 	"encoding/json"
-	"github.com/yeahfo/cloud-native-tour/apiserver-from-scratch/pkg/helper"
+	"github.com/eonvon/cloud-native-tour/apiserver-from-scratch/pkg/helper"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/rand"
 	"net/http"
@@ -17,7 +17,7 @@ var apiDiscoveries = `{
 	"items": [
 	  {
 		"metadata": {
-		  "name": "hello.yeahfo.github.io"
+		  "name": "hello.eonvon.github.io"
 		},
 		"versions": [
 		  {
@@ -26,7 +26,7 @@ var apiDiscoveries = `{
 			  {
 				"resource": "foos",
 				"responseKind": {
-				  "group": "hello.yeahfo.github.io",
+				  "group": "hello.eonvon.github.io",
 				  "kind": "Foo",
 				  "version": "v1"
 				},
@@ -63,14 +63,14 @@ var apis = metav1.APIGroupList{
 				Kind:       "APIGroup",
 				APIVersion: "v1",
 			},
-			Name: "hello.yeahfo.github.io",
+			Name: "hello.eonvon.github.io",
 			Versions: []metav1.GroupVersionForDiscovery{
 				{
-					GroupVersion: "hello.yeahfo.github.io/v1",
+					GroupVersion: "hello.eonvon.github.io/v1",
 					Version:      "v1",
 				},
 			},
-			PreferredVersion: metav1.GroupVersionForDiscovery{GroupVersion: "hello.yeahfo.github.io/v1", Version: "v1"},
+			PreferredVersion: metav1.GroupVersionForDiscovery{GroupVersion: "hello.eonvon.github.io/v1", Version: "v1"},
 		},
 	},
 }
@@ -108,11 +108,11 @@ func APIs(responseWriter http.ResponseWriter, request *http.Request) {
 
 // APIGroup GET APIGroupHelloV1
 //
-//	@Summary		Get APIGroupHelloV1 info of 'hello.yeahfo.github.io'
-//	@Description	Get APIGroupHelloV1 'hello.yeahfo.github.io' detail, including version list and preferred version
+//	@Summary		Get APIGroupHelloV1 info of 'hello.eonvon.github.io'
+//	@Description	Get APIGroupHelloV1 'hello.eonvon.github.io' detail, including version list and preferred version
 //	@Produce		json
 //	@Success		200	{object} metav1.APIGroup
-//	@Router			/apis/hello.yeahfo.github.io [get]
+//	@Router			/apis/hello.eonvon.github.io [get]
 func APIGroup(responseWriter http.ResponseWriter, _ *http.Request) {
 	responseWriter.Header().Set("Content-Type", "application/json")
 	helper.RenderJSON(responseWriter, apis.Groups[0])
@@ -123,7 +123,7 @@ var apiResourceList = metav1.APIResourceList{
 		APIVersion: "v1",
 		Kind:       "APIResourceList",
 	},
-	GroupVersion: "hello.yeahfo.github.io/v1",
+	GroupVersion: "hello.eonvon.github.io/v1",
 	APIResources: []metav1.APIResource{
 		{
 			Kind:         "Foo",
@@ -147,7 +147,7 @@ var apiResourceList = metav1.APIResourceList{
 const v1Resources = `{
 	"kind": "APIResourceList",
 	"apiVersion": "v1",
-	"groupVersion": "hello.yeahfo.github.io/v1",
+	"groupVersion": "hello.eonvon.github.io/v1",
 	"resources": [
 	  {
 		"name": "foos",
@@ -174,11 +174,11 @@ const v1Resources = `{
 
 // APIGroupV1Resources Get APIGroupV1Resources
 //
-//	@Summary		Get APIGroupHelloV1Resources for group version 'hello.yeahfo.github.io/v1'
-//	@Description	List APIResource Info about group version 'hello.yeahfo.github.io/v1'
+//	@Summary		Get APIGroupHelloV1Resources for group version 'hello.eonvon.github.io/v1'
+//	@Description	List APIResource Info about group version 'hello.eonvon.github.io/v1'
 //	@Produce		json
 //	@Success		200	{string} APIGroupV1Resources
-//	@Router			/apis/hello.yeahfo.github.io/v1 [get]
+//	@Router			/apis/hello.eonvon.github.io/v1 [get]
 func APIGroupV1Resources(responseWriter http.ResponseWriter, _ *http.Request) {
 	responseWriter.Header().Set("Content-Type", "application/json")
 	if selector := rand.IntnRange(0, 1); selector == 0 {

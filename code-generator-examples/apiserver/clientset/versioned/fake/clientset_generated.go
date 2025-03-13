@@ -19,10 +19,10 @@ limitations under the License.
 package fake
 
 import (
-	applyconfiguration "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/applyconfiguration"
-	clientset "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/clientset/versioned"
-	corev1 "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/clientset/versioned/typed/core/v1"
-	fakecorev1 "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/clientset/versioned/typed/core/v1/fake"
+	applyconfiguration "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/applyconfiguration"
+	clientset "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/clientset/versioned"
+	corev1 "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/clientset/versioned/typed/core/v1"
+	fakecorev1 "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/clientset/versioned/typed/core/v1/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"

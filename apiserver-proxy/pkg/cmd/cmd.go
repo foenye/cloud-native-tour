@@ -3,8 +3,8 @@ package cmd
 import (
 	"flag"
 	"fmt"
+	"github.com/eonvon/cloud-native-tour/apiserver-proxy/pkg/apiserver"
 	"github.com/spf13/cobra"
-	"github.com/yeahfo/cloud-native-tour/apiserver-proxy/pkg/apiserver"
 	"k8s.io/apimachinery/pkg/util/errors"
 	utilwait "k8s.io/apimachinery/pkg/util/wait"
 	"k8s.io/apiserver/pkg/server"

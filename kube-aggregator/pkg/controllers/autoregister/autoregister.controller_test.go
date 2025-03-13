@@ -2,9 +2,9 @@ package autoregister
 
 import (
 	"fmt"
-	apiregistrationv1 "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1"
-	"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/client/clientset_generated/clientset/fake"
-	generatedClientListersV1 "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/client/listers/apiregistration/v1"
+	apiregistrationv1 "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1"
+	"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/client/clientset_generated/clientset/fake"
+	generatedClientListersV1 "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/client/listers/apiregistration/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	clientGoTesting "k8s.io/client-go/testing"
 	"k8s.io/client-go/tools/cache"

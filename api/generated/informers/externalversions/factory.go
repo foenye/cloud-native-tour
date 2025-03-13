@@ -22,9 +22,9 @@ import (
 	sync "sync"
 	time "time"
 
-	versioned "github.com/yeahfo/cloud-native-tour/api/generated/clientset/versioned"
-	helloyeahfogithubio "github.com/yeahfo/cloud-native-tour/api/generated/informers/externalversions/hello.yeahfo.github.io"
-	internalinterfaces "github.com/yeahfo/cloud-native-tour/api/generated/informers/externalversions/internalinterfaces"
+	versioned "github.com/eonvon/cloud-native-tour/api/generated/clientset/versioned"
+	helloeonvongithubio "github.com/eonvon/cloud-native-tour/api/generated/informers/externalversions/hello.eonvon.github.io"
+	internalinterfaces "github.com/eonvon/cloud-native-tour/api/generated/informers/externalversions/internalinterfaces"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -253,9 +253,9 @@ type SharedInformerFactory interface {
 	// client.
 	InformerFor(obj runtime.Object, newFunc internalinterfaces.NewInformerFunc) cache.SharedIndexInformer
 
-	Hello() helloyeahfogithubio.Interface
+	Hello() helloeonvongithubio.Interface
 }
 
-func (f *sharedInformerFactory) Hello() helloyeahfogithubio.Interface {
-	return helloyeahfogithubio.New(f, f.namespace, f.tweakListOptions)
+func (f *sharedInformerFactory) Hello() helloeonvongithubio.Interface {
+	return helloeonvongithubio.New(f, f.namespace, f.tweakListOptions)
 }

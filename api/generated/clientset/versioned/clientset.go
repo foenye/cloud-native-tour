@@ -21,8 +21,8 @@ import (
 	fmt "fmt"
 	http "net/http"
 
-	hellov1 "github.com/yeahfo/cloud-native-tour/api/generated/clientset/versioned/typed/hello.yeahfo.github.io/v1"
-	hellov2 "github.com/yeahfo/cloud-native-tour/api/generated/clientset/versioned/typed/hello.yeahfo.github.io/v2"
+	hellov1 "github.com/eonvon/cloud-native-tour/api/generated/clientset/versioned/typed/hello.eonvon.github.io/v1"
+	hellov2 "github.com/eonvon/cloud-native-tour/api/generated/clientset/versioned/typed/hello.eonvon.github.io/v2"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"

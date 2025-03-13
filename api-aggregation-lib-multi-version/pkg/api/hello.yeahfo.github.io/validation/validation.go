@@ -1,7 +1,7 @@
 package validation
 
 import (
-	"github.com/yeahfo/cloud-native-tour/api-aggregation-lib-multi-version/pkg/api/hello.yeahfo.github.io"
+	"github.com/eonvon/cloud-native-tour/api-aggregation-lib-multi-version/pkg/api/hello.eonvon.github.io"
 	"k8s.io/apimachinery/pkg/util/validation/field"
 )
 

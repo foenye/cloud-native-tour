@@ -1,12 +1,12 @@
 package v1beta1
 
 import (
-	transformationv1beta1 "github.com/yeahfo/cloud-native-tour/api/transformation/v1beta1"
+	transformationv1beta1 "github.com/eonvon/cloud-native-tour/api/transformation/v1beta1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 )
 
 // GroupName specifies the group name used to register the objects.
-const GroupName = "transformation.yeahfo.github.io"
+const GroupName = "transformation.eonvon.github.io"
 
 // SchemeGroupVersion is group version used to register these objects
 var SchemeGroupVersion = schema.GroupVersion{Group: GroupName, Version: "v1beta1"}

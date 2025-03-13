@@ -6,7 +6,7 @@ import (
 )
 
 // GroupName is the API group for apiregistration
-const GroupName = "apiregistration.yeahfo.github.io"
+const GroupName = "apiregistration.eonvon.github.io"
 
 // SchemeGroupVersion is group version used to register there objects
 var SchemeGroupVersion = schema.GroupVersion{Group: GroupName, Version: runtime.APIVersionInternal}

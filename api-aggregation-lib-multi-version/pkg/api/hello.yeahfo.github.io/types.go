@@ -5,7 +5,7 @@ import (
 )
 
 const (
-	Group     = "hello.yeahfo.github.io"
+	Group     = "hello.eonvon.github.io"
 	Plural    = "foos"
 	Singular  = "foo"
 	ShortName = "fo"

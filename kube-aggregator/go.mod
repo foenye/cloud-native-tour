@@ -1,4 +1,4 @@
-module github.com/yeahfo/cloud-native-tour/kube-aggregator
+module github.com/eonvon/cloud-native-tour/kube-aggregator
 
 go 1.23.4
 

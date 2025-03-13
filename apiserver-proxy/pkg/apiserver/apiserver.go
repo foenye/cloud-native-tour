@@ -2,7 +2,7 @@ package apiserver
 
 import (
 	"context"
-	"github.com/yeahfo/cloud-native-tour/apiserver-proxy/pkg/proxy"
+	"github.com/eonvon/cloud-native-tour/apiserver-proxy/pkg/proxy"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 	apiserver "k8s.io/apiserver/pkg/server"
 	clientGoKubeScheme "k8s.io/client-go/kubernetes/scheme"

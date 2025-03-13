@@ -21,8 +21,8 @@ limitations under the License.
 package v1
 
 import (
-	helloyeahfogithubio "github.com/yeahfo/cloud-native-tour/api-aggregation-lib-multi-version/pkg/api/hello.yeahfo.github.io"
-	helloyeahfogithubiov1 "github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v1"
+	helloeonvongithubio "github.com/eonvon/cloud-native-tour/api-aggregation-lib-multi-version/pkg/api/hello.eonvon.github.io"
+	helloeonvongithubiov1 "github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v1"
 	conversion "k8s.io/apimachinery/pkg/conversion"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 )
@@ -34,63 +34,63 @@ func init() {
 // RegisterConversions adds conversion functions to the given scheme.
 // Public to allow building arbitrary schemes.
 func RegisterConversions(s *runtime.Scheme) error {
-	if err := s.AddGeneratedConversionFunc((*helloyeahfogithubiov1.FooList)(nil), (*helloyeahfogithubio.FooList)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1_FooList_To_helloyeahfogithubio_FooList(a.(*helloyeahfogithubiov1.FooList), b.(*helloyeahfogithubio.FooList), scope)
+	if err := s.AddGeneratedConversionFunc((*helloeonvongithubiov1.FooList)(nil), (*helloeonvongithubio.FooList)(nil), func(a, b interface{}, scope conversion.Scope) error {
+		return Convert_v1_FooList_To_helloeonvongithubio_FooList(a.(*helloeonvongithubiov1.FooList), b.(*helloeonvongithubio.FooList), scope)
 	}); err != nil {
 		return err
 	}
-	if err := s.AddGeneratedConversionFunc((*helloyeahfogithubio.FooList)(nil), (*helloyeahfogithubiov1.FooList)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_helloyeahfogithubio_FooList_To_v1_FooList(a.(*helloyeahfogithubio.FooList), b.(*helloyeahfogithubiov1.FooList), scope)
+	if err := s.AddGeneratedConversionFunc((*helloeonvongithubio.FooList)(nil), (*helloeonvongithubiov1.FooList)(nil), func(a, b interface{}, scope conversion.Scope) error {
+		return Convert_helloeonvongithubio_FooList_To_v1_FooList(a.(*helloeonvongithubio.FooList), b.(*helloeonvongithubiov1.FooList), scope)
 	}); err != nil {
 		return err
 	}
-	if err := s.AddConversionFunc((*helloyeahfogithubio.FooSpec)(nil), (*helloyeahfogithubiov1.FooSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_helloyeahfogithubio_FooSpec_To_v1_FooSpec(a.(*helloyeahfogithubio.FooSpec), b.(*helloyeahfogithubiov1.FooSpec), scope)
+	if err := s.AddConversionFunc((*helloeonvongithubio.FooSpec)(nil), (*helloeonvongithubiov1.FooSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
+		return Convert_helloeonvongithubio_FooSpec_To_v1_FooSpec(a.(*helloeonvongithubio.FooSpec), b.(*helloeonvongithubiov1.FooSpec), scope)
 	}); err != nil {
 		return err
 	}
-	if err := s.AddConversionFunc((*helloyeahfogithubio.Foo)(nil), (*helloyeahfogithubiov1.Foo)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_helloyeahfogithubio_Foo_To_v1_Foo(a.(*helloyeahfogithubio.Foo), b.(*helloyeahfogithubiov1.Foo), scope)
+	if err := s.AddConversionFunc((*helloeonvongithubio.Foo)(nil), (*helloeonvongithubiov1.Foo)(nil), func(a, b interface{}, scope conversion.Scope) error {
+		return Convert_helloeonvongithubio_Foo_To_v1_Foo(a.(*helloeonvongithubio.Foo), b.(*helloeonvongithubiov1.Foo), scope)
 	}); err != nil {
 		return err
 	}
-	if err := s.AddConversionFunc((*helloyeahfogithubiov1.FooSpec)(nil), (*helloyeahfogithubio.FooSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1_FooSpec_To_helloyeahfogithubio_FooSpec(a.(*helloyeahfogithubiov1.FooSpec), b.(*helloyeahfogithubio.FooSpec), scope)
+	if err := s.AddConversionFunc((*helloeonvongithubiov1.FooSpec)(nil), (*helloeonvongithubio.FooSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
+		return Convert_v1_FooSpec_To_helloeonvongithubio_FooSpec(a.(*helloeonvongithubiov1.FooSpec), b.(*helloeonvongithubio.FooSpec), scope)
 	}); err != nil {
 		return err
 	}
-	if err := s.AddConversionFunc((*helloyeahfogithubiov1.Foo)(nil), (*helloyeahfogithubio.Foo)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1_Foo_To_helloyeahfogithubio_Foo(a.(*helloyeahfogithubiov1.Foo), b.(*helloyeahfogithubio.Foo), scope)
+	if err := s.AddConversionFunc((*helloeonvongithubiov1.Foo)(nil), (*helloeonvongithubio.Foo)(nil), func(a, b interface{}, scope conversion.Scope) error {
+		return Convert_v1_Foo_To_helloeonvongithubio_Foo(a.(*helloeonvongithubiov1.Foo), b.(*helloeonvongithubio.Foo), scope)
 	}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func autoConvert_v1_Foo_To_helloyeahfogithubio_Foo(in *helloyeahfogithubiov1.Foo, out *helloyeahfogithubio.Foo, s conversion.Scope) error {
+func autoConvert_v1_Foo_To_helloeonvongithubio_Foo(in *helloeonvongithubiov1.Foo, out *helloeonvongithubio.Foo, s conversion.Scope) error {
 	out.ObjectMeta = in.ObjectMeta
-	if err := Convert_v1_FooSpec_To_helloyeahfogithubio_FooSpec(&in.Spec, &out.Spec, s); err != nil {
+	if err := Convert_v1_FooSpec_To_helloeonvongithubio_FooSpec(&in.Spec, &out.Spec, s); err != nil {
 		return err
 	}
 	return nil
 }
 
-func autoConvert_helloyeahfogithubio_Foo_To_v1_Foo(in *helloyeahfogithubio.Foo, out *helloyeahfogithubiov1.Foo, s conversion.Scope) error {
+func autoConvert_helloeonvongithubio_Foo_To_v1_Foo(in *helloeonvongithubio.Foo, out *helloeonvongithubiov1.Foo, s conversion.Scope) error {
 	out.ObjectMeta = in.ObjectMeta
-	if err := Convert_helloyeahfogithubio_FooSpec_To_v1_FooSpec(&in.Spec, &out.Spec, s); err != nil {
+	if err := Convert_helloeonvongithubio_FooSpec_To_v1_FooSpec(&in.Spec, &out.Spec, s); err != nil {
 		return err
 	}
 	// WARNING: in.Status requires manual conversion: does not exist in peer-type
 	return nil
 }
 
-func autoConvert_v1_FooList_To_helloyeahfogithubio_FooList(in *helloyeahfogithubiov1.FooList, out *helloyeahfogithubio.FooList, s conversion.Scope) error {
+func autoConvert_v1_FooList_To_helloeonvongithubio_FooList(in *helloeonvongithubiov1.FooList, out *helloeonvongithubio.FooList, s conversion.Scope) error {
 	out.ListMeta = in.ListMeta
 	if in.Items != nil {
 		in, out := &in.Items, &out.Items
-		*out = make([]helloyeahfogithubio.Foo, len(*in))
+		*out = make([]helloeonvongithubio.Foo, len(*in))
 		for i := range *in {
-			if err := Convert_v1_Foo_To_helloyeahfogithubio_Foo(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_v1_Foo_To_helloeonvongithubio_Foo(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -100,18 +100,18 @@ func autoConvert_v1_FooList_To_helloyeahfogithubio_FooList(in *helloyeahfogithub
 	return nil
 }
 
-// Convert_v1_FooList_To_helloyeahfogithubio_FooList is an autogenerated conversion function.
-func Convert_v1_FooList_To_helloyeahfogithubio_FooList(in *helloyeahfogithubiov1.FooList, out *helloyeahfogithubio.FooList, s conversion.Scope) error {
-	return autoConvert_v1_FooList_To_helloyeahfogithubio_FooList(in, out, s)
+// Convert_v1_FooList_To_helloeonvongithubio_FooList is an autogenerated conversion function.
+func Convert_v1_FooList_To_helloeonvongithubio_FooList(in *helloeonvongithubiov1.FooList, out *helloeonvongithubio.FooList, s conversion.Scope) error {
+	return autoConvert_v1_FooList_To_helloeonvongithubio_FooList(in, out, s)
 }
 
-func autoConvert_helloyeahfogithubio_FooList_To_v1_FooList(in *helloyeahfogithubio.FooList, out *helloyeahfogithubiov1.FooList, s conversion.Scope) error {
+func autoConvert_helloeonvongithubio_FooList_To_v1_FooList(in *helloeonvongithubio.FooList, out *helloeonvongithubiov1.FooList, s conversion.Scope) error {
 	out.ListMeta = in.ListMeta
 	if in.Items != nil {
 		in, out := &in.Items, &out.Items
-		*out = make([]helloyeahfogithubiov1.Foo, len(*in))
+		*out = make([]helloeonvongithubiov1.Foo, len(*in))
 		for i := range *in {
-			if err := Convert_helloyeahfogithubio_Foo_To_v1_Foo(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_helloeonvongithubio_Foo_To_v1_Foo(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -121,18 +121,18 @@ func autoConvert_helloyeahfogithubio_FooList_To_v1_FooList(in *helloyeahfogithub
 	return nil
 }
 
-// Convert_helloyeahfogithubio_FooList_To_v1_FooList is an autogenerated conversion function.
-func Convert_helloyeahfogithubio_FooList_To_v1_FooList(in *helloyeahfogithubio.FooList, out *helloyeahfogithubiov1.FooList, s conversion.Scope) error {
-	return autoConvert_helloyeahfogithubio_FooList_To_v1_FooList(in, out, s)
+// Convert_helloeonvongithubio_FooList_To_v1_FooList is an autogenerated conversion function.
+func Convert_helloeonvongithubio_FooList_To_v1_FooList(in *helloeonvongithubio.FooList, out *helloeonvongithubiov1.FooList, s conversion.Scope) error {
+	return autoConvert_helloeonvongithubio_FooList_To_v1_FooList(in, out, s)
 }
 
-func autoConvert_v1_FooSpec_To_helloyeahfogithubio_FooSpec(in *helloyeahfogithubiov1.FooSpec, out *helloyeahfogithubio.FooSpec, s conversion.Scope) error {
+func autoConvert_v1_FooSpec_To_helloeonvongithubio_FooSpec(in *helloeonvongithubiov1.FooSpec, out *helloeonvongithubio.FooSpec, s conversion.Scope) error {
 	// WARNING: in.Msg requires manual conversion: does not exist in peer-type
 	// WARNING: in.Description requires manual conversion: does not exist in peer-type
 	return nil
 }
 
-func autoConvert_helloyeahfogithubio_FooSpec_To_v1_FooSpec(in *helloyeahfogithubio.FooSpec, out *helloyeahfogithubiov1.FooSpec, s conversion.Scope) error {
+func autoConvert_helloeonvongithubio_FooSpec_To_v1_FooSpec(in *helloeonvongithubio.FooSpec, out *helloeonvongithubiov1.FooSpec, s conversion.Scope) error {
 	// WARNING: in.Image requires manual conversion: does not exist in peer-type
 	// WARNING: in.Config requires manual conversion: does not exist in peer-type
 	return nil

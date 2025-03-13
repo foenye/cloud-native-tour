@@ -24,7 +24,7 @@ package v1
 import (
 	unsafe "unsafe"
 
-	apiregistration "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration"
+	apiregistration "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	conversion "k8s.io/apimachinery/pkg/conversion"
 	runtime "k8s.io/apimachinery/pkg/runtime"

@@ -18,7 +18,7 @@ limitations under the License.
 package v1
 
 import (
-	internalinterfaces "github.com/yeahfo/cloud-native-tour/api/generated/informers/externalversions/internalinterfaces"
+	internalinterfaces "github.com/eonvon/cloud-native-tour/api/generated/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to all the informers in this group version.

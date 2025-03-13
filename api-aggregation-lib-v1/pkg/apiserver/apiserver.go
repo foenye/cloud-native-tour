@@ -1,9 +1,9 @@
 package apiserver
 
 import (
-	"github.com/yeahfo/cloud-native-tour/api-aggregation-lib-v1/pkg/registry/hello.yeahfo.github.io/foo"
-	hello "github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io"
-	hellov1 "github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v1"
+	"github.com/eonvon/cloud-native-tour/api-aggregation-lib-v1/pkg/registry/hello.eonvon.github.io/foo"
+	hello "github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io"
+	hellov1 "github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"

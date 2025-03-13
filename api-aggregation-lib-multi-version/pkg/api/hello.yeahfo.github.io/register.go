@@ -13,7 +13,7 @@ var (
 )
 
 // GroupName is the group name use in this package
-const GroupName = "hello.yeahfo.github.io"
+const GroupName = "hello.eonvon.github.io"
 
 // SchemeGroupVersion is group version used to register these objects
 var SchemeGroupVersion = schema.GroupVersion{Group: GroupName, Version: runtime.APIVersionInternal}

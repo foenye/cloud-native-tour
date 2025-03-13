@@ -7,7 +7,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 // Base64 generates a base64 encoding for a specified Kubernetes object.
 // Base64 is commonly implemented as a subresource for specific Kubernetes kind.
 // For instance, you can find it used in the
-// `/apis/hello.yeahfo.github.io/v2/namespaces/default/foos/myfoo/base64` endpoint.
+// `/apis/hello.eonvon.github.io/v2/namespaces/default/foos/myfoo/base64` endpoint.
 type Base64 struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`

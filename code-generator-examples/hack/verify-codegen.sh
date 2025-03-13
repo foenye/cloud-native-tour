@@ -46,9 +46,9 @@ fi
 # smoke test
 echo "Smoke testing examples by compiling..."
 pushd "${SCRIPT_ROOT}"
-#  go build "github.com/yeahfo/cloud-native-tour/code-generator-examples/crd/..."
-#  go build "github.com/yeahfo/cloud-native-tour/code-generator-examples/single/..."
-  go build "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/..."
-#  go build "github.com/yeahfo/cloud-native-tour/code-generator-examples/MixedCase/..."
-#  go build "github.com/yeahfo/cloud-native-tour/code-generator-examples/HyphenGroup/..."
+#  go build "github.com/eonvon/cloud-native-tour/code-generator-examples/crd/..."
+#  go build "github.com/eonvon/cloud-native-tour/code-generator-examples/single/..."
+  go build "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/..."
+#  go build "github.com/eonvon/cloud-native-tour/code-generator-examples/MixedCase/..."
+#  go build "github.com/eonvon/cloud-native-tour/code-generator-examples/HyphenGroup/..."
 popd

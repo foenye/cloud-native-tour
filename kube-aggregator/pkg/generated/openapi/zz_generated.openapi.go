@@ -29,18 +29,18 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIService":               schema_pkg_apis_apiregistration_v1_APIService(ref),
-		"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIServiceCondition":      schema_pkg_apis_apiregistration_v1_APIServiceCondition(ref),
-		"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIServiceList":           schema_pkg_apis_apiregistration_v1_APIServiceList(ref),
-		"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIServiceSpec":           schema_pkg_apis_apiregistration_v1_APIServiceSpec(ref),
-		"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIServiceStatus":         schema_pkg_apis_apiregistration_v1_APIServiceStatus(ref),
-		"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.ServiceReference":         schema_pkg_apis_apiregistration_v1_ServiceReference(ref),
-		"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIService":          schema_pkg_apis_apiregistration_v1beta1_APIService(ref),
-		"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIServiceCondition": schema_pkg_apis_apiregistration_v1beta1_APIServiceCondition(ref),
-		"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIServiceList":      schema_pkg_apis_apiregistration_v1beta1_APIServiceList(ref),
-		"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIServiceSpec":      schema_pkg_apis_apiregistration_v1beta1_APIServiceSpec(ref),
-		"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIServiceStatus":    schema_pkg_apis_apiregistration_v1beta1_APIServiceStatus(ref),
-		"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.ServiceReference":    schema_pkg_apis_apiregistration_v1beta1_ServiceReference(ref),
+		"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIService":               schema_pkg_apis_apiregistration_v1_APIService(ref),
+		"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIServiceCondition":      schema_pkg_apis_apiregistration_v1_APIServiceCondition(ref),
+		"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIServiceList":           schema_pkg_apis_apiregistration_v1_APIServiceList(ref),
+		"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIServiceSpec":           schema_pkg_apis_apiregistration_v1_APIServiceSpec(ref),
+		"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIServiceStatus":         schema_pkg_apis_apiregistration_v1_APIServiceStatus(ref),
+		"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.ServiceReference":         schema_pkg_apis_apiregistration_v1_ServiceReference(ref),
+		"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIService":          schema_pkg_apis_apiregistration_v1beta1_APIService(ref),
+		"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIServiceCondition": schema_pkg_apis_apiregistration_v1beta1_APIServiceCondition(ref),
+		"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIServiceList":      schema_pkg_apis_apiregistration_v1beta1_APIServiceList(ref),
+		"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIServiceSpec":      schema_pkg_apis_apiregistration_v1beta1_APIServiceSpec(ref),
+		"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIServiceStatus":    schema_pkg_apis_apiregistration_v1beta1_APIServiceStatus(ref),
+		"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.ServiceReference":    schema_pkg_apis_apiregistration_v1beta1_ServiceReference(ref),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.APIGroup":                                                            schema_pkg_apis_meta_v1_APIGroup(ref),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.APIGroupList":                                                        schema_pkg_apis_meta_v1_APIGroupList(ref),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.APIResource":                                                         schema_pkg_apis_meta_v1_APIResource(ref),
@@ -129,21 +129,21 @@ func schema_pkg_apis_apiregistration_v1_APIService(ref common.ReferenceCallback)
 						SchemaProps: spec.SchemaProps{
 							Description: "Spec contains information for locating and communicating with a server",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIServiceSpec"),
+							Ref:         ref("github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIServiceSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Description: "Status contains derived information about an API server",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIServiceStatus"),
+							Ref:         ref("github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIServiceStatus"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIServiceSpec", "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIServiceStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIServiceSpec", "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIServiceStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -235,7 +235,7 @@ func schema_pkg_apis_apiregistration_v1_APIServiceList(ref common.ReferenceCallb
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIService"),
+										Ref:     ref("github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIService"),
 									},
 								},
 							},
@@ -246,7 +246,7 @@ func schema_pkg_apis_apiregistration_v1_APIServiceList(ref common.ReferenceCallb
 			},
 		},
 		Dependencies: []string{
-			"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIService", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIService", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -260,7 +260,7 @@ func schema_pkg_apis_apiregistration_v1_APIServiceSpec(ref common.ReferenceCallb
 					"service": {
 						SchemaProps: spec.SchemaProps{
 							Description: "Service is a reference to the service for this API server.  It must communicate on port 443. If the Service is nil, that means the handling for the API groupversion is handled locally on this server. The call will simply delegate to the normal handler chain to be fulfilled.",
-							Ref:         ref("github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.ServiceReference"),
+							Ref:         ref("github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.ServiceReference"),
 						},
 					},
 					"group": {
@@ -317,7 +317,7 @@ func schema_pkg_apis_apiregistration_v1_APIServiceSpec(ref common.ReferenceCallb
 			},
 		},
 		Dependencies: []string{
-			"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.ServiceReference"},
+			"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.ServiceReference"},
 	}
 }
 
@@ -346,7 +346,7 @@ func schema_pkg_apis_apiregistration_v1_APIServiceStatus(ref common.ReferenceCal
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIServiceCondition"),
+										Ref:     ref("github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIServiceCondition"),
 									},
 								},
 							},
@@ -356,7 +356,7 @@ func schema_pkg_apis_apiregistration_v1_APIServiceStatus(ref common.ReferenceCal
 			},
 		},
 		Dependencies: []string{
-			"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIServiceCondition"},
+			"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1.APIServiceCondition"},
 	}
 }
 
@@ -426,21 +426,21 @@ func schema_pkg_apis_apiregistration_v1beta1_APIService(ref common.ReferenceCall
 						SchemaProps: spec.SchemaProps{
 							Description: "Spec contains information for locating and communicating with a server",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIServiceSpec"),
+							Ref:         ref("github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIServiceSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Description: "Status contains derived information about an API server",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIServiceStatus"),
+							Ref:         ref("github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIServiceStatus"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIServiceSpec", "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIServiceStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIServiceSpec", "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIServiceStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -532,7 +532,7 @@ func schema_pkg_apis_apiregistration_v1beta1_APIServiceList(ref common.Reference
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIService"),
+										Ref:     ref("github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIService"),
 									},
 								},
 							},
@@ -543,7 +543,7 @@ func schema_pkg_apis_apiregistration_v1beta1_APIServiceList(ref common.Reference
 			},
 		},
 		Dependencies: []string{
-			"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIService", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIService", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -557,7 +557,7 @@ func schema_pkg_apis_apiregistration_v1beta1_APIServiceSpec(ref common.Reference
 					"service": {
 						SchemaProps: spec.SchemaProps{
 							Description: "Service is a reference to the service for this API server.  It must communicate on port 443. If the Service is nil, that means the handling for the API groupversion is handled locally on this server. The call will simply delegate to the normal handler chain to be fulfilled.",
-							Ref:         ref("github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.ServiceReference"),
+							Ref:         ref("github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.ServiceReference"),
 						},
 					},
 					"group": {
@@ -614,7 +614,7 @@ func schema_pkg_apis_apiregistration_v1beta1_APIServiceSpec(ref common.Reference
 			},
 		},
 		Dependencies: []string{
-			"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.ServiceReference"},
+			"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.ServiceReference"},
 	}
 }
 
@@ -643,7 +643,7 @@ func schema_pkg_apis_apiregistration_v1beta1_APIServiceStatus(ref common.Referen
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIServiceCondition"),
+										Ref:     ref("github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIServiceCondition"),
 									},
 								},
 							},
@@ -653,7 +653,7 @@ func schema_pkg_apis_apiregistration_v1beta1_APIServiceStatus(ref common.Referen
 			},
 		},
 		Dependencies: []string{
-			"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIServiceCondition"},
+			"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1.APIServiceCondition"},
 	}
 }
 

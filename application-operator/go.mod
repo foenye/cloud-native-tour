@@ -1,4 +1,4 @@
-module github.com/yeahfo/cloud-native-tour/application-operator
+module github.com/eonvon/cloud-native-tour/application-operator
 
 go 1.23.0
 

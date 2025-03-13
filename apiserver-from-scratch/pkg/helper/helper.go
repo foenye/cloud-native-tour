@@ -27,7 +27,7 @@ func RenderJSON(responseWriter http.ResponseWriter, value interface{}) {
 //	},
 //	Status: metav1.StatusFailure,
 //	Details: &metav1.StatusDetails{
-//		Group: "hello.yeahfo.github.io",
+//		Group: "hello.eonvon.github.io",
 //		Kind:  "foos",
 //	},
 //}
@@ -40,7 +40,7 @@ const errorStatusTemplate = `
 	"status": "Failure",
 	"message": "%s",
 	"reason": "%s",
-	"details": {"group": "hello.yeahfo.github.io", "kind": "foos", "name": "%s"},
+	"details": {"group": "hello.eonvon.github.io", "kind": "foos", "name": "%s"},
 	"code": %d
 }
 `

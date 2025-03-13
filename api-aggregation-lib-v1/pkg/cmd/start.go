@@ -3,10 +3,10 @@ package cmd
 import (
 	"flag"
 	"fmt"
+	myAPIserver "github.com/eonvon/cloud-native-tour/api-aggregation-lib-v1/pkg/apiserver"
+	generatedOpenAPI "github.com/eonvon/cloud-native-tour/api/generated/openapi"
+	hellov1 "github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v1"
 	"github.com/spf13/cobra"
-	myAPIserver "github.com/yeahfo/cloud-native-tour/api-aggregation-lib-v1/pkg/apiserver"
-	generatedOpenAPI "github.com/yeahfo/cloud-native-tour/api/generated/openapi"
-	hellov1 "github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	waitUtil "k8s.io/apimachinery/pkg/util/wait"

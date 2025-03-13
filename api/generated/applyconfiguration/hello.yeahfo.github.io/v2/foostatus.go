@@ -18,13 +18,13 @@ limitations under the License.
 package v2
 
 import (
-	helloyeahfogithubiov2 "github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2"
+	helloeonvongithubiov2 "github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2"
 )
 
 // FooStatusApplyConfiguration represents a declarative configuration of the FooStatus type for use
 // with apply.
 type FooStatusApplyConfiguration struct {
-	Phase      *helloyeahfogithubiov2.FooPhase  `json:"phase,omitempty"`
+	Phase      *helloeonvongithubiov2.FooPhase  `json:"phase,omitempty"`
 	Conditions []FooConditionApplyConfiguration `json:"conditions,omitempty"`
 }
 
@@ -37,7 +37,7 @@ func FooStatus() *FooStatusApplyConfiguration {
 // WithPhase sets the Phase field in the declarative configuration to the given value
 // and returns the receiver, so that objects can be built by chaining "With" function invocations.
 // If called multiple times, the Phase field is set to the value of the last call.
-func (b *FooStatusApplyConfiguration) WithPhase(value helloyeahfogithubiov2.FooPhase) *FooStatusApplyConfiguration {
+func (b *FooStatusApplyConfiguration) WithPhase(value helloeonvongithubiov2.FooPhase) *FooStatusApplyConfiguration {
 	b.Phase = &value
 	return b
 }

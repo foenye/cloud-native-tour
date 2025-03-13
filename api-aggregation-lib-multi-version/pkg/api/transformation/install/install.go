@@ -1,8 +1,8 @@
 package install
 
 import (
-	"github.com/yeahfo/cloud-native-tour/api-aggregation-lib-multi-version/pkg/api/transformation"
-	transformationv1beta1 "github.com/yeahfo/cloud-native-tour/api/transformation/v1beta1"
+	"github.com/eonvon/cloud-native-tour/api-aggregation-lib-multi-version/pkg/api/transformation"
+	transformationv1beta1 "github.com/eonvon/cloud-native-tour/api/transformation/v1beta1"
 	"k8s.io/apimachinery/pkg/runtime"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 )

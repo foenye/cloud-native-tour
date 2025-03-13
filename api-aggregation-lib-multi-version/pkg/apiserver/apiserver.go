@@ -1,12 +1,12 @@
 package apiserver
 
 import (
-	"github.com/yeahfo/cloud-native-tour/api-aggregation-lib-multi-version/pkg/api/hello.yeahfo.github.io"
-	helloInstaller "github.com/yeahfo/cloud-native-tour/api-aggregation-lib-multi-version/pkg/api/hello.yeahfo.github.io/install"
-	transformationInstaller "github.com/yeahfo/cloud-native-tour/api-aggregation-lib-multi-version/pkg/api/transformation/install"
-	registryFoo "github.com/yeahfo/cloud-native-tour/api-aggregation-lib-multi-version/pkg/registry/hello.yeahfo.github.io/foo"
-	hellov1 "github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v1"
-	hellov2 "github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2"
+	"github.com/eonvon/cloud-native-tour/api-aggregation-lib-multi-version/pkg/api/hello.eonvon.github.io"
+	helloInstaller "github.com/eonvon/cloud-native-tour/api-aggregation-lib-multi-version/pkg/api/hello.eonvon.github.io/install"
+	transformationInstaller "github.com/eonvon/cloud-native-tour/api-aggregation-lib-multi-version/pkg/api/transformation/install"
+	registryFoo "github.com/eonvon/cloud-native-tour/api-aggregation-lib-multi-version/pkg/registry/hello.eonvon.github.io/foo"
+	hellov1 "github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v1"
+	hellov2 "github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"

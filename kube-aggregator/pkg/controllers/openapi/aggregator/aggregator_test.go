@@ -3,7 +3,7 @@ package aggregator
 import (
 	"bytes"
 	"encoding/json"
-	apiregistrationv1 "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1"
+	apiregistrationv1 "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1"
 	"io"
 	"k8s.io/kube-openapi/pkg/validation/spec"
 	"net/http"

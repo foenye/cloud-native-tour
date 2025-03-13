@@ -2,7 +2,7 @@ package validation
 
 import (
 	"fmt"
-	"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration"
+	"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration"
 	"k8s.io/apimachinery/pkg/api/validation"
 	"k8s.io/apimachinery/pkg/api/validation/path"
 	utilvalidation "k8s.io/apimachinery/pkg/util/validation"

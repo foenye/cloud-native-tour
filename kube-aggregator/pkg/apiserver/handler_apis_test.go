@@ -1,10 +1,10 @@
 package apiserver
 
 import (
+	"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration"
+	apiserverSchema "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apiserver/scheme"
+	generatedClientListersV1 "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/client/listers/apiregistration/v1"
 	"github.com/google/go-cmp/cmp"
-	"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration"
-	apiserverSchema "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apiserver/scheme"
-	generatedClientListersV1 "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/client/listers/apiregistration/v1"
 	"io"
 	"k8s.io/apimachinery/pkg/api/equality"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

@@ -18,12 +18,12 @@ limitations under the License.
 package fake
 
 import (
-	applyconfiguration "github.com/yeahfo/cloud-native-tour/api/generated/applyconfiguration"
-	clientset "github.com/yeahfo/cloud-native-tour/api/generated/clientset/versioned"
-	hellov1 "github.com/yeahfo/cloud-native-tour/api/generated/clientset/versioned/typed/hello.yeahfo.github.io/v1"
-	fakehellov1 "github.com/yeahfo/cloud-native-tour/api/generated/clientset/versioned/typed/hello.yeahfo.github.io/v1/fake"
-	hellov2 "github.com/yeahfo/cloud-native-tour/api/generated/clientset/versioned/typed/hello.yeahfo.github.io/v2"
-	fakehellov2 "github.com/yeahfo/cloud-native-tour/api/generated/clientset/versioned/typed/hello.yeahfo.github.io/v2/fake"
+	applyconfiguration "github.com/eonvon/cloud-native-tour/api/generated/applyconfiguration"
+	clientset "github.com/eonvon/cloud-native-tour/api/generated/clientset/versioned"
+	hellov1 "github.com/eonvon/cloud-native-tour/api/generated/clientset/versioned/typed/hello.eonvon.github.io/v1"
+	fakehellov1 "github.com/eonvon/cloud-native-tour/api/generated/clientset/versioned/typed/hello.eonvon.github.io/v1/fake"
+	hellov2 "github.com/eonvon/cloud-native-tour/api/generated/clientset/versioned/typed/hello.eonvon.github.io/v2"
+	fakehellov2 "github.com/eonvon/cloud-native-tour/api/generated/clientset/versioned/typed/hello.eonvon.github.io/v2/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"

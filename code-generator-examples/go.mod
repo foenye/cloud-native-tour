@@ -1,4 +1,4 @@
-module github.com/yeahfo/cloud-native-tour/code-generator-examples
+module github.com/eonvon/cloud-native-tour/code-generator-examples
 
 go 1.23.4
 

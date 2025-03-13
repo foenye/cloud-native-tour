@@ -5,7 +5,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/yeahfo/cloud-native-tour/apiserver-from-scratch/pkg/helper"
+	"github.com/eonvon/cloud-native-tour/apiserver-from-scratch/pkg/helper"
 	jsonpatch "gopkg.in/evanphx/json-patch.v4"
 	"io"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -77,7 +77,7 @@ func (fooList *FooList) toTableRows() (tableRows []metav1.TableRow) {
 func init() {
 	fooRepository["default/bar"] = Foo{
 		TypeMeta: metav1.TypeMeta{
-			APIVersion: "hello.yeahfo.github.io/v1",
+			APIVersion: "hello.eonvon.github.io/v1",
 			Kind:       "Foo",
 		},
 		ObjectMeta: metav1.ObjectMeta{
@@ -130,9 +130,9 @@ func tryConvert2Table(obj interface{}, acceptedContentType string) interface{} {
 
 func FooHandlers(responseWriter http.ResponseWriter, request *http.Request) {
 	requestPath := request.URL.Path
-	namespacedResource := strings.TrimPrefix(requestPath, "/apis/hello.yeahfo.github.io/v1/namespaces/")
+	namespacedResource := strings.TrimPrefix(requestPath, "/apis/hello.eonvon.github.io/v1/namespaces/")
 	if namespacedResource == requestPath &&
-		requestPath == "/apis/hello.yeahfo.github.io/v1/foos" {
+		requestPath == "/apis/hello.eonvon.github.io/v1/foos" {
 		getAllFoos(responseWriter, request)
 		return
 	}
@@ -176,7 +176,7 @@ func FooHandlers(responseWriter http.ResponseWriter, request *http.Request) {
 // @Param        namespace	path	string  true  "Namepsace"
 // @Param        name	path	string  true  "Resource Name"
 // @Success      200  {object}  Foo "deleted"
-// @Router       /apis/hello.yeahfo.github.io/v1/namespaces/{namespace}/foos/{name} [delete]
+// @Router       /apis/hello.eonvon.github.io/v1/namespaces/{namespace}/foos/{name} [delete]
 func DeleteFoo(writer http.ResponseWriter, request *http.Request, name string) {
 	namespace := request.Context().Value(namespaced)
 	namespacedName := fmt.Sprintf("%s/%s", namespace, name)
@@ -206,7 +206,7 @@ func DeleteFoo(writer http.ResponseWriter, request *http.Request, name string) {
 // @Param        namespace	path	string  true  "Namepsace"
 // @Param        name	path	string  true  "Resource Name"
 // @Success      200  {object}  Foo "OK"
-// @Router       /apis/hello.yeahfo.github.io/v1/namespaces/{namespace}/foos/{name} [patch]
+// @Router       /apis/hello.eonvon.github.io/v1/namespaces/{namespace}/foos/{name} [patch]
 func ReviseFoo(writer http.ResponseWriter, request *http.Request, name string) {
 	namespace := request.Context().Value(namespaced)
 	namespacedName := fmt.Sprintf("%s/%s", namespace, name)
@@ -299,7 +299,7 @@ func ReviseFoo(writer http.ResponseWriter, request *http.Request, name string) {
 // @Param        name	path	string  true  "Resource Name"
 // @Success      201  {object}  Foo	"created"
 // @Success      200  {object}  Foo "updated"
-// @Router       /apis/hello.yeahfo.github.io/v1/namespaces/{namespace}/foos/{name} [put]
+// @Router       /apis/hello.eonvon.github.io/v1/namespaces/{namespace}/foos/{name} [put]
 func UpdateFoo(writer http.ResponseWriter, request *http.Request, name string) {
 	namespace := request.Context().Value(namespaced)
 	namespacedName := fmt.Sprintf("%s/%s", namespace, name)
@@ -331,7 +331,7 @@ func UpdateFoo(writer http.ResponseWriter, request *http.Request, name string) {
 // @Produce      json
 // @Param        namespace	path	string  true  "Namepsace"
 // @Success      201  {object}  Foo
-// @Router       /apis/hello.yeahfo.github.io/v1/namespaces/{namespace}/foos [post]
+// @Router       /apis/hello.eonvon.github.io/v1/namespaces/{namespace}/foos [post]
 func CreateFoo(writer http.ResponseWriter, request *http.Request) {
 	requestBodyDecoder := json.NewDecoder(request.Body)
 	requestBodyDecoder.DisallowUnknownFields()
@@ -342,7 +342,7 @@ func CreateFoo(writer http.ResponseWriter, request *http.Request) {
 		return
 	}
 
-	foo.APIVersion = "hello.yeahfo.github.io/v1"
+	foo.APIVersion = "hello.eonvon.github.io/v1"
 	foo.Kind = "Foo"
 	foo.CreationTimestamp = metav1.Now()
 	namespace := request.Context().Value(namespaced)
@@ -370,7 +370,7 @@ func CreateFoo(writer http.ResponseWriter, request *http.Request) {
 // @Param        namespace	path	string  true  "Namepsace"
 // @Param        name	path	string  true  "Resource Name"
 // @Success      200  {object}  Foo
-// @Router       /apis/hello.yeahfo.github.io/v1/namespaces/{namespace}/foos/{name} [get]
+// @Router       /apis/hello.eonvon.github.io/v1/namespaces/{namespace}/foos/{name} [get]
 func GetFoo(responseWriter http.ResponseWriter, request *http.Request, name string) {
 	namespace := request.Context().Value(namespaced)
 	namespacedName := fmt.Sprintf("%s/%s", namespace, name)
@@ -393,10 +393,10 @@ func GetFoo(responseWriter http.ResponseWriter, request *http.Request, name stri
 // @Tags         foos
 // @Produce      json
 // @Success      200  {object}  FooList
-// @Router       /apis/hello.yeahfo.github.io/v1/foos [get]
+// @Router       /apis/hello.eonvon.github.io/v1/foos [get]
 func getAllFoos(responseWriter http.ResponseWriter, request *http.Request) {
 	fooList := FooList{
-		TypeMeta: metav1.TypeMeta{APIVersion: "hello.yeahfo.github.io/v1", Kind: "FooList"},
+		TypeMeta: metav1.TypeMeta{APIVersion: "hello.eonvon.github.io/v1", Kind: "FooList"},
 		ObjectMeta: metav1.ObjectMeta{
 			Name:              "fooList",
 			CreationTimestamp: metav1.Now(),
@@ -419,10 +419,10 @@ func getAllFoos(responseWriter http.ResponseWriter, request *http.Request) {
 // @Produce      json
 // @Param        namespace	path	string  true  "Namepsace"
 // @Success      200  {object}  FooList
-// @Router       /apis/hello.yeahfo.github.io/v1/namespaces/{namespace}/foos [get]
+// @Router       /apis/hello.eonvon.github.io/v1/namespaces/{namespace}/foos [get]
 func GetAllFoosInNamespace(responseWriter http.ResponseWriter, request *http.Request) {
 	fooList := FooList{
-		TypeMeta: metav1.TypeMeta{APIVersion: "hello.yeahfo.github.io/v1", Kind: "FooList"},
+		TypeMeta: metav1.TypeMeta{APIVersion: "hello.eonvon.github.io/v1", Kind: "FooList"},
 	}
 
 	fooLock.Lock()

@@ -2,7 +2,7 @@
 // +k8s:deepcopy-gen=package,register
 // +k8s:defaulter-gen=TypeMeta
 // +k8s:protobuf-gen=package
-// +k8s:conversion-gen=github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/apis/core
+// +k8s:conversion-gen=github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/apis/core
 // +groupName=
 
 package core

@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/emicklei/go-restful/v3"
-	apiregistrationv1 "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1"
+	apiregistrationv1 "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1"
 	"k8s.io/apiserver/pkg/server"
 	"k8s.io/klog/v2"
 	"k8s.io/kube-openapi/pkg/aggregator"

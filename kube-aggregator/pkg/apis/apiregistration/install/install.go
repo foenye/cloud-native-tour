@@ -1,9 +1,9 @@
 package install
 
 import (
-	"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration"
-	"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1"
-	"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1"
+	"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration"
+	"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1"
+	"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1beta1"
 	"k8s.io/apimachinery/pkg/runtime"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 )

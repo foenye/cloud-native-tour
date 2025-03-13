@@ -23,9 +23,9 @@ import (
 	sync "sync"
 	time "time"
 
-	versioned "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/clientset/versioned"
-	core "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/informers/externalversions/core"
-	internalinterfaces "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/informers/externalversions/internalinterfaces"
+	versioned "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/clientset/versioned"
+	core "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/informers/externalversions/core"
+	internalinterfaces "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/informers/externalversions/internalinterfaces"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

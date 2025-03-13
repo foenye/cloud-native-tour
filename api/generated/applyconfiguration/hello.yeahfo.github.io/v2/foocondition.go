@@ -18,14 +18,14 @@ limitations under the License.
 package v2
 
 import (
-	helloyeahfogithubiov2 "github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v2"
+	helloeonvongithubiov2 "github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v2"
 	v1 "k8s.io/api/core/v1"
 )
 
 // FooConditionApplyConfiguration represents a declarative configuration of the FooCondition type for use
 // with apply.
 type FooConditionApplyConfiguration struct {
-	Type   *helloyeahfogithubiov2.FooConditionType `json:"type,omitempty"`
+	Type   *helloeonvongithubiov2.FooConditionType `json:"type,omitempty"`
 	Status *v1.ConditionStatus                     `json:"status,omitempty"`
 }
 
@@ -38,7 +38,7 @@ func FooCondition() *FooConditionApplyConfiguration {
 // WithType sets the Type field in the declarative configuration to the given value
 // and returns the receiver, so that objects can be built by chaining "With" function invocations.
 // If called multiple times, the Type field is set to the value of the last call.
-func (b *FooConditionApplyConfiguration) WithType(value helloyeahfogithubiov2.FooConditionType) *FooConditionApplyConfiguration {
+func (b *FooConditionApplyConfiguration) WithType(value helloeonvongithubiov2.FooConditionType) *FooConditionApplyConfiguration {
 	b.Type = &value
 	return b
 }

@@ -1,5 +1,5 @@
 /*
-Copyright 2025 Yeahfo.
+Copyright 2025 eonvon.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ import (
 	logf "sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 
-	applicationv1 "github.com/yeahfo/cloud-native-tour/application-operator/api/v1"
+	applicationv1 "github.com/eonvon/cloud-native-tour/application-operator/api/v1"
 	// +kubebuilder:scaffold:imports
 )
 

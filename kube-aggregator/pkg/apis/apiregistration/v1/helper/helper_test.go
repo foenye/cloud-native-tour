@@ -1,7 +1,7 @@
 package helper
 
 import (
-	v1 "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1"
+	v1 "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"reflect"
 	"testing"
@@ -192,8 +192,8 @@ func TestAPIServiceNameToGroupVersion(t *testing.T) {
 	}{
 		{
 			name:           "Should name equal want name",
-			apiServiceName: "v1.apiregistration.yeahfo.github.io",
-			want:           schema.GroupVersion{Group: "apiregistration.yeahfo.github.io", Version: "v1"},
+			apiServiceName: "v1.apiregistration.eonvon.github.io",
+			want:           schema.GroupVersion{Group: "apiregistration.eonvon.github.io", Version: "v1"},
 		},
 		{
 			name:           "Should name not equal want name",

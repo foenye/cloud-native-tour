@@ -21,8 +21,8 @@ package v1
 import (
 	http "net/http"
 
-	corev1 "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1"
-	scheme "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/clientset/versioned/scheme"
+	corev1 "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1"
+	scheme "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 

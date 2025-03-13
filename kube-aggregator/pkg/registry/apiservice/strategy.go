@@ -3,8 +3,8 @@ package apiservice
 import (
 	"context"
 	"fmt"
-	"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration"
-	"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/validation"
+	"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration"
+	"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/validation"
 	"k8s.io/apimachinery/pkg/fields"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/runtime"

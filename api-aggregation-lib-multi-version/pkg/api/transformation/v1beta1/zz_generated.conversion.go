@@ -21,8 +21,8 @@ limitations under the License.
 package v1beta1
 
 import (
-	transformation "github.com/yeahfo/cloud-native-tour/api-aggregation-lib-multi-version/pkg/api/transformation"
-	transformationv1beta1 "github.com/yeahfo/cloud-native-tour/api/transformation/v1beta1"
+	transformation "github.com/eonvon/cloud-native-tour/api-aggregation-lib-multi-version/pkg/api/transformation"
+	transformationv1beta1 "github.com/eonvon/cloud-native-tour/api/transformation/v1beta1"
 	conversion "k8s.io/apimachinery/pkg/conversion"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 )

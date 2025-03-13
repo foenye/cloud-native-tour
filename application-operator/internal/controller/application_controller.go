@@ -1,5 +1,5 @@
 /*
-Copyright 2025 Yeahfo.
+Copyright 2025 eonvon.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/log"
 
-	applicationv1 "github.com/yeahfo/cloud-native-tour/application-operator/api/v1"
+	applicationv1 "github.com/eonvon/cloud-native-tour/application-operator/api/v1"
 )
 
 // ApplicationReconciler reconciles a Application object
@@ -38,9 +38,9 @@ type ApplicationReconciler struct {
 	Scheme *runtime.Scheme
 }
 
-// +kubebuilder:rbac:groups=apps.yeahfo.github.io,resources=applications,verbs=get;list;watch;create;update;patch;delete
-// +kubebuilder:rbac:groups=apps.yeahfo.github.io,resources=applications/status,verbs=get;update;patch
-// +kubebuilder:rbac:groups=apps.yeahfo.github.io,resources=applications/finalizers,verbs=update
+// +kubebuilder:rbac:groups=apps.eonvon.github.io,resources=applications,verbs=get;list;watch;create;update;patch;delete
+// +kubebuilder:rbac:groups=apps.eonvon.github.io,resources=applications/status,verbs=get;update;patch
+// +kubebuilder:rbac:groups=apps.eonvon.github.io,resources=applications/finalizers,verbs=update
 
 // Reconcile is part of the main kubernetes reconciliation loop which aims to
 // move the current state of the cluster closer to the desired state.

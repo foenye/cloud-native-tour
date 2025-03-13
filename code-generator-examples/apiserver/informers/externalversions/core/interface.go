@@ -19,8 +19,8 @@ limitations under the License.
 package core
 
 import (
-	v1 "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/informers/externalversions/core/v1"
-	internalinterfaces "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/informers/externalversions/internalinterfaces"
+	v1 "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/informers/externalversions/core/v1"
+	internalinterfaces "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to each of this group's versions.

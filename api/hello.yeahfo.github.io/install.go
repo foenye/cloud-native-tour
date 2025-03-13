@@ -1,7 +1,7 @@
-package hello_yeahfo_github_io
+package hello_eonvon_github_io
 
 import (
-	v1 "github.com/yeahfo/cloud-native-tour/api/hello.yeahfo.github.io/v1"
+	v1 "github.com/eonvon/cloud-native-tour/api/hello.eonvon.github.io/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 )

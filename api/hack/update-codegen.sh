@@ -24,7 +24,7 @@ CODEGEN_PKG=${CODEGEN_PKG:-$(cd "${SCRIPT_ROOT}"; ls -d -1 ./vendor/k8s.io/code-
 
 source "${CODEGEN_PKG}/kube_codegen.sh"
 
-THIS_PKG="github.com/yeahfo/cloud-native-tour/api"
+THIS_PKG="github.com/eonvon/cloud-native-tour/api"
 
 kube::codegen::gen_helpers \
     --boilerplate "${SCRIPT_ROOT}/hack/boilerplate.go.txt" \
@@ -32,7 +32,7 @@ kube::codegen::gen_helpers \
 
 kube::codegen::gen_register \
       --boilerplate "${SCRIPT_ROOT}/hack/boilerplate.go.txt" \
-       "${SCRIPT_ROOT}/hello.yeahfo.github.io"
+       "${SCRIPT_ROOT}/hello.eonvon.github.io"
 
 kube::codegen::gen_register \
       --boilerplate "${SCRIPT_ROOT}/hack/boilerplate.go.txt" \
@@ -66,7 +66,7 @@ kube::codegen::gen_client \
 
 
 #go-to-protobuf \
-#    --packages github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1 \
+#    --packages github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1 \
 #    --apimachinery-packages=+k8s.io/apimachinery/pkg/util/intstr,+k8s.io/apimachinery/pkg/api/resource,+k8s.io/apimachinery/pkg/runtime/schema,+k8s.io/apimachinery/pkg/runtime,k8s.io/apimachinery/pkg/apis/meta/v1,k8s.io/api/core/v1,k8s.io/api/policy/v1beta1 \
 #    --go-header-file "${SCRIPT_ROOT}/hack/boilerplate.go.txt"
 

@@ -1,4 +1,4 @@
 // +k8s:deepcopy-gen=package
-// +groupName=hello.yeahfo.github.io
+// +groupName=hello.eonvon.github.io
 
 package hello

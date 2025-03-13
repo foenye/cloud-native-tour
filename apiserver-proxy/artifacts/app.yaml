@@ -40,7 +40,7 @@ spec:
     spec:
       serviceAccountName: apiserver-proxy
       containers:
-        - image: ko://github.com/yeahfo/cloud-native-tour/apiserver-proxy
+        - image: ko://github.com/eonvon/cloud-native-tour/apiserver-proxy
           args:
             [
               "--cert-dir=/etc/kubernetes/pki",

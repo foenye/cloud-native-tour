@@ -21,7 +21,7 @@ package externalversions
 import (
 	fmt "fmt"
 
-	v1 "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1"
+	v1 "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/apis/core/v1"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	cache "k8s.io/client-go/tools/cache"
 )

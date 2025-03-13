@@ -4,9 +4,9 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration"
-	apiregistrationv1 "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1"
-	apiregistrationv1helper "github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1/helper"
+	"github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration"
+	apiregistrationv1 "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1"
+	apiregistrationv1helper "github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration/v1/helper"
 	apiDiscoveryV2 "k8s.io/api/apidiscovery/v2"
 	apiDiscoveryV2beta1 "k8s.io/api/apidiscovery/v2beta1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -510,7 +510,7 @@ func (manager *discoveryManager) Run(stopCh <-chan struct{}, discoverySyncCh cha
 	// Shutdown the queue since stopCh was signalled
 	defer manager.dirtyAPIServiceQueue.ShutDown()
 
-	// Ensure that apiregistration.yeahfo.github.io is the first group in the discovery group.
+	// Ensure that apiregistration.eonvon.github.io is the first group in the discovery group.
 	manager.mergedDiscoveryHandler.WithSource(endpointsDiscoveryAggregated.BuiltinSource).SetGroupVersionPriority(
 		APIRegistrationGroupVersion, APIRegistrationGroupPriority, 0)
 

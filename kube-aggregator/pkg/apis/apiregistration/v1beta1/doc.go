@@ -1,9 +1,9 @@
 // +k8s:deepcopy-gen=package
 // +k8s:protobuf-gen=package
-// +k8s:conversion-gen=github.com/yeahfo/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration
+// +k8s:conversion-gen=github.com/eonvon/cloud-native-tour/kube-aggregator/pkg/apis/apiregistration
 // +k8s:openapi-gen=true
 // +k8s:defaulter-gen=TypeMeta
-// +groupName=apiregistration.yeahfo.github.io
+// +groupName=apiregistration.eonvon.github.io
 
 // Package v1beta1 contains the API Registration API, which is responsible for
 // registering an API `Group`/`Version` with another kubernetes like API server.

@@ -24,7 +24,7 @@ package v1
 import (
 	unsafe "unsafe"
 
-	core "github.com/yeahfo/cloud-native-tour/code-generator-examples/apiserver/apis/core"
+	core "github.com/eonvon/cloud-native-tour/code-generator-examples/apiserver/apis/core"
 	conversion "k8s.io/apimachinery/pkg/conversion"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 )
