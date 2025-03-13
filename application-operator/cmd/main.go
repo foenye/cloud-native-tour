@@ -37,7 +37,7 @@ import (
 	metricsserver "sigs.k8s.io/controller-runtime/pkg/metrics/server"
 	"sigs.k8s.io/controller-runtime/pkg/webhook"
 
-	appsv1 "github.com/yeahfo/cloud-native-tour/application-operator/api/v1"
+	applicationv1 "github.com/yeahfo/cloud-native-tour/application-operator/api/v1"
 	"github.com/yeahfo/cloud-native-tour/application-operator/internal/controller"
 	// +kubebuilder:scaffold:imports
 )
@@ -50,7 +50,7 @@ var (
 func init() {
 	utilruntime.Must(clientgoscheme.AddToScheme(scheme))
 
-	utilruntime.Must(appsv1.AddToScheme(scheme))
+	utilruntime.Must(applicationv1.AddToScheme(scheme))
 	// +kubebuilder:scaffold:scheme
 }
 
