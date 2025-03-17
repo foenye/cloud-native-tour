@@ -12,3 +12,4 @@
 **/hack/*violation_exceptions.list
 
 kube-aggregator/pkg/apiserver/testdata/*.pem
+/karpenter/karpenter-raw/
