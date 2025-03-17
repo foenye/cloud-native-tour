@@ -66,6 +66,7 @@ func createPod() error {
 		fmt.Printf("%s\n", jsonStatus)
 	}
 	return nil
+
 }
 
 func deserializeStatusBody(serializer runtime.Serializer, created []byte) (*metav1.Status, error) {
