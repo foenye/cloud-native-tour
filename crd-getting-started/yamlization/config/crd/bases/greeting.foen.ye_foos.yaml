@@ -1,0 +1,46 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  # 固定格式 {kind_plural}.{group}，其中 foos 对应 spec.names.plural，greeting.foen.ye 对应 spec.group
+  name: foos.greeting.foen.ye
+spec:
+  # 资源组，用在 URL 标识资源所属 Group，如 /apis/greeting.foen.ye/v1/foos 之 greeting.foen.ye
+  group: greeting.foen.ye
+  names:
+    kind: Foo
+    listKind: FooList
+    # 资源名复数，用在 URL 标识资源类型，如 /apis/greeting.foen.ye/v1/foos 之 foos
+    plural: foos
+    # 资源名单数，可用于 kubectl 匹配资源
+    singular: foo
+    # 资源简称，可用于 kubectl 匹配资源
+    shortNames:
+      - fo
+  # Namespaced/Cluster
+  scope: Namespaced
+  versions:
+    - name: v1
+      # 是否启用该版本，可使用该标识启动/禁用该版本 API
+      served: true
+      # 唯一落存储版本，如果 CRD 含有多个版本，只能有一个版本被标识为 true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            spec:
+              type: object
+              required:
+                - msg
+              properties:
+                msg:
+                  type: string
+                  maxLength: 15
+      # 声明 kubectl get 输出列，默认在 name 列之外额外输出 age 列，改为额外输出 age 列，message 列
+      additionalPrinterColumns:
+        - jsonPath: .metadata.creationTimestamp
+          name: age
+          type: date
+        - jsonPath: .spec.msg
+          name: message
+          type: string

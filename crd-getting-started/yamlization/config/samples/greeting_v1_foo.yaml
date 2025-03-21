@@ -1,0 +1,6 @@
+apiVersion: greeting.foen.ye/v1
+kind: Foo
+metadata:
+  name: test
+spec:
+  msg: hello there 👏

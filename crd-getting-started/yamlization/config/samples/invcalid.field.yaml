@@ -1,0 +1,6 @@
+apiVersion: greeting.foen.ye/v1
+kind: Foo
+metadata:
+  name: invalid
+spec:
+  msg: hello world, hello world

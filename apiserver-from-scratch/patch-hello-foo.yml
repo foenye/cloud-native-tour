@@ -1,6 +1,0 @@
-# kubectl patch foo/test --patch-file patch-hello-foo.yml 
-# ATTENTION ⚠️: Custom Resource don't support patchStrategy application/strategic-merge-patch+json
-# see https://github.com/kubernetes/kubernetes/pull/53558/files)
-spec:
-  msg: 'hey there'
-  description: '👋 hello world from application/strategic-merge-patch+json 👋'
