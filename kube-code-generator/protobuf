@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# Usage:
+#     protobuf "${APIROOTS[@]}"
+#     An example APIROOT is: "k8s.io/api/admissionregistration/v1"
+
+set -eufo pipefail
+
+BOILERPLATE_CUSTOM=/tmp/custom-boilerplate.txt
+[[ -f ${BOILERPLATE_CUSTOM} ]] || touch ${BOILERPLATE_CUSTOM}
+
+PROJECT_MOD="${PROJECT_MOD:-""}"
+[ -z "${PROJECT_MOD}" ] && echo "PROJECT_MOD env var is required" && exit 1
+
+cd ${GOPATH}/src/${PROJECT_MOD}
+go mod tidy
+
+go-to-protobuf \
+  --proto-import=${GOPATH}/src \
+  --proto-import=${GOPATH}/src/k8s.io/kubernetes/third_party/protobuf \
+  --packages "$(IFS=, ; echo "$*")" \
+  --output-dir ${GOPATH}/src \
+  --go-header-file "${BOILERPLATE_CUSTOM}"
+
+echo "generated:";
+find -name "*.proto"
+echo "generated:";
+find -name "*.pb.go"

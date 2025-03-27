@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+GENERATION_TARGETS="${GENERATION_TARGETS:-protobuf,register,helpers,client,openapi}"
+
+PROJECT_MOD="${PROJECT_MOD:-""}"
+[ -z "${PROJECT_MOD}" ] && echo "PROJECT_MOD env var is required" && exit 1
+
+if grep -qw "protobuf" <<<"${GENERATION_TARGETS}"; then
+  API_PACKAGES="${API_PACKAGES:-""}"
+  [ -z "${API_PACKAGES}" ] && echo "API_PACKAGES env var is required for gen protobuf" && exit 1
+  protobuf ${API_PACKAGES}
+fi
+
+if grep -qw "register" <<<"${GENERATION_TARGETS}"; then
+  API_ROOT="${API_ROOT:-""}"
+  [ -z "${API_ROOT}" ] && echo "API_ROOT env var is required for gen register" && exit 1
+  register ${API_ROOT}
+fi
+
+if grep -qw "helpers" <<<"${GENERATION_TARGETS}"; then
+  API_ROOT="${API_ROOT:-""}"
+  [ -z "${API_ROOT}" ] && echo "API_ROOT env var is required for gen helpers" && exit 1
+  helpers ${API_ROOT}
+fi
+
+if grep -qw "client" <<<"${GENERATION_TARGETS}"; then
+  API_ROOT="${API_ROOT:-""}"
+  [ -z "${API_ROOT}" ] && echo "API_ROOT env var is required for gen client" && exit 1
+  client ${API_ROOT}
+fi
+
+if grep -qw "openapi" <<<"${GENERATION_TARGETS}"; then
+  API_ROOT="${API_ROOT:-""}"
+  [ -z "${API_ROOT}" ] && echo "API_ROOT env var is required for gen openapi" && exit 1
+  openapi ${API_ROOT}
+fi

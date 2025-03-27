@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -o errexit
+set -o nounset
+set -o pipefail
+
+PROJECT_MOD="${PROJECT_MOD:-""}"
+[ -z "${PROJECT_MOD}" ] && echo "PROJECT_MOD env var is required" && exit 1
+CRD_VERSION="${CRD_VERSION:-""}"
+[ -z "${CRD_VERSION}" ] && echo "CRD_VERSION env var is required gen crd" && exit 1
+CRD_TYPE_PATH="${CRD_TYPE_PATH:-""}"
+[ -z "${CRD_TYPE_PATH}" ] && echo "CRD_TYPE_PATH env var is required gen crd" && exit 1
+
+cd ${GOPATH}/src/${PROJECT_MOD}
+
+controller-gen \
+  crd:crdVersions=${CRD_VERSION} \
+  paths=./${CRD_TYPE_PATH}/... \
+  output:dir=${CRD_OUTPUT_DIR:-"./config/crd/bases"}

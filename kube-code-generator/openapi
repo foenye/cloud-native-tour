@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# Usage:
+#     helpers "${APIROOT}"
+#     An example APIROOT is: "pkg/apis"
+
+set -o errexit
+set -o nounset
+set -o pipefail
+
+PROJECT_MOD="${PROJECT_MOD:-""}"
+[ -z "${PROJECT_MOD}" ] && echo "PROJECT_MOD env var is required" && exit 1
+
+BOILERPLATE_CUSTOM=/tmp/custom-boilerplate.txt
+[[ -f ${BOILERPLATE_CUSTOM} ]] || touch ${BOILERPLATE_CUSTOM}
+
+source "$GOPATH/src/k8s.io/code-generator/kube_codegen.sh"
+
+THIS_PKG="${PROJECT_MOD}"
+cd ${GOPATH}/src/${PROJECT_MOD}
+
+kube::codegen::gen_openapi \
+    --output-dir "pkg/generated/openapi" \
+    --output-pkg "${THIS_PKG}/pkg/generated/openapi" \
+    --report-filename /k8s-openapi/aggregator_violation_exceptions.list \
+    --update-report \
+    --boilerplate "${BOILERPLATE_CUSTOM}" \
+    "${*}"

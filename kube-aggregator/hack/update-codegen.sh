@@ -23,17 +23,12 @@ CODEGEN_PKG=${CODEGEN_PKG:-$(cd "${SCRIPT_ROOT}"; ls -d -1 ./vendor/k8s.io/code-
 
 source "${CODEGEN_PKG}/kube_codegen.sh"
 
-THIS_PKG="github.com/eonvon/cloud-native-tour/kube-aggregator"
+THIS_PKG="k8s.io/kube-aggregator"
 
 kube::codegen::gen_helpers \
     --boilerplate "${SCRIPT_ROOT}/hack/boilerplate.go.txt" \
     "${SCRIPT_ROOT}/pkg/apis"
 
-kube::codegen::gen_register \
-      --boilerplate "${SCRIPT_ROOT}/hack/boilerplate.go.txt" \
-       "${SCRIPT_ROOT}/pkg/apis"
-
-API_KNOWN_VIOLATIONS_DIR="${SCRIPT_ROOT}/hack"
 if [[ -n "${API_KNOWN_VIOLATIONS_DIR:-}" ]]; then
     report_filename="${API_KNOWN_VIOLATIONS_DIR}/aggregator_violation_exceptions.list"
     if [[ "${UPDATE_API_KNOWN_VIOLATIONS:-}" == "true" ]]; then
