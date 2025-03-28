@@ -39,6 +39,7 @@ COPY protobuf /usr/local/bin/protobuf
 COPY generation /usr/local/bin/generation
 COPY register /usr/local/bin/register
 COPY helpers /usr/local/bin/helpers
+COPY client /usr/local/bin/client
 COPY openapi /usr/local/bin/openapi
 COPY aggregator_violation_exceptions.list /k8s-openapi/aggregator_violation_exceptions.list
 COPY crd /usr/local/bin/crd
