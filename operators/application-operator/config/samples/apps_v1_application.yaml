@@ -4,6 +4,15 @@ metadata:
   labels:
     app.kubernetes.io/name: application-operator
     app.kubernetes.io/managed-by: kustomize
+    app: nginx
   name: application-sample
+  namespace: default
 spec:
-  # TODO(user): Add fields here
+  replicas: 3
+  template:
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.29.0
+          ports:
+            - containerPort: 80

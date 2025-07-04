@@ -18,13 +18,18 @@ package controller
 
 import (
 	"context"
+	"fmt"
+	corev1 "k8s.io/api/core/v1"
+	"k8s.io/apimachinery/pkg/api/errors"
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	"time"
 
 	"k8s.io/apimachinery/pkg/runtime"
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	logf "sigs.k8s.io/controller-runtime/pkg/log"
 
-	appsv1 "github.com/foenye/cloud-native-tour/operators/application-operator/api/v1"
+	crappsv1 "github.com/foenye/cloud-native-tour/operators/application-operator/api/v1"
 )
 
 // ApplicationReconciler reconciles a Application object
@@ -47,9 +52,36 @@ type ApplicationReconciler struct {
 // For more details, check Reconcile and its Result here:
 // - https://pkg.go.dev/sigs.k8s.io/controller-runtime@v0.21.0/pkg/reconcile
 func (r *ApplicationReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
-	_ = logf.FromContext(ctx)
+	logger := logf.FromContext(ctx)
 
-	// TODO(user): your logic here
+	// Get the application
+	crapp := &crappsv1.Application{}
+	if err := r.Get(ctx, req.NamespacedName, crapp); err != nil {
+		if errors.IsNotFound(err) {
+			logger.Info("The Application is not found")
+			return ctrl.Result{}, nil
+		}
+		logger.Error(err, "Failed to get the Application")
+		return ctrl.Result{RequeueAfter: 1 * time.Minute}, err
+	}
+
+	// Create pods
+	for i := 0; i < int(crapp.Spec.Replicas); i++ {
+		pod := &corev1.Pod{
+			ObjectMeta: metav1.ObjectMeta{
+				Name:      fmt.Sprintf("%s-%d", crapp.Name, i),
+				Namespace: crapp.Namespace,
+				Labels:    crapp.Labels,
+			},
+			Spec: crapp.Spec.Template.Spec,
+		}
+		if err := r.Create(ctx, pod); err != nil {
+			logger.Error(err, "Failed to create Pod")
+			return ctrl.Result{RequeueAfter: 1 * time.Minute}, err
+		}
+		logger.Info(fmt.Sprintf("The Pod (%s) has created", pod.Name))
+	}
+	logger.Info("All Pods has created")
 
 	return ctrl.Result{}, nil
 }
@@ -57,7 +89,7 @@ func (r *ApplicationReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 // SetupWithManager sets up the controller with the Manager.
 func (r *ApplicationReconciler) SetupWithManager(mgr ctrl.Manager) error {
 	return ctrl.NewControllerManagedBy(mgr).
-		For(&appsv1.Application{}).
+		For(&crappsv1.Application{}).
 		Named("application").
 		Complete(r)
 }
